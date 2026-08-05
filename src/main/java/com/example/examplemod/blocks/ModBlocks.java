@@ -3,12 +3,11 @@ package com.example.examplemod.blocks;
 import java.util.function.Function;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.blocks.custom.MagicBlock;
 import com.example.examplemod.item.ModItems;
-import com.mojang.blaze3d.opengl.Uniform;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -65,6 +64,14 @@ public class ModBlocks {
                     .strength(2.5f)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE)
+                )
+            );
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block", properties -> 
+        new MagicBlock(properties
+                    .strength(3f)
+                    .requiresCorrectToolForDrops()
+                    .sound(SoundType.DECORATED_POT)
                 )
             );
     

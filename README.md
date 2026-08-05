@@ -28,8 +28,13 @@ Use the Metal Detector on a block to scan vertically downward, starting at the s
 - Deepslate Azurite Ore
 - Nether Azurite Ore
 - End Azurite Ore
+- Magic Block
 
 The ore variants award experience when mined. Azurite and Raw Azurite blocks require the correct harvesting tool and use an amethyst-like sound; ore blocks likewise require the correct tool.
+
+### Magic Block
+
+The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron ingot, Azurite, or redstone.
 
 ## Obtaining Azurite
 
@@ -44,7 +49,7 @@ The ore variants award experience when mined. Azurite and Raw Azurite blocks req
 The mod includes two Creative Mode tabs:
 
 - **Example Items**: Raw Azurite, Azurite, and the Metal Detector.
-- **Example Blocks**: All Azurite blocks and ore variants.
+- **Example Blocks**: All Azurite blocks and ore variants, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
 
@@ -66,7 +71,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector and Magic Block.
 
 ## License
 
