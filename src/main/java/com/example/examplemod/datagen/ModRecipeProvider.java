@@ -46,7 +46,7 @@ public class ModRecipeProvider extends RecipeProvider {
 
     @Override
     protected void buildRecipes() {
-        // nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.HOOK,
+        // nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.AZURITE,
         // RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZURITE_BLOCK,
         // getSimpleRecipeName(ModBlocks.AZURITE_BLOCK), ExampleMod.MOD_ID + ":" +
         // getSimpleRecipeName(ModBlocks.AZURITE_BLOCK),
@@ -58,21 +58,21 @@ public class ModRecipeProvider extends RecipeProvider {
                 .pattern("AAA")
                 .pattern("AAA")
                 .pattern("AAA")
-                .define('A', ModItems.HOOK.get())
-                .unlockedBy(getHasName(ModItems.HOOK.get()), has(ModItems.HOOK))
+                .define('A', ModItems.AZURITE.get())
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
                 .group("azurites")
                 .save(output);
 
-        shapeless(RecipeCategory.MISC, ModItems.HOOK.get(), 9)
+        shapeless(RecipeCategory.MISC, ModItems.AZURITE.get(), 9)
                 .requires(ModBlocks.AZURITE_BLOCK)
-                .unlockedBy(getHasName(ModItems.HOOK.get()), has(ModItems.HOOK))
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
                 .group("azurites")
                 .save(output);
 
-        shapeless(RecipeCategory.MISC, ModItems.HOOK.get(), 18)
+        shapeless(RecipeCategory.MISC, ModItems.AZURITE.get(), 18)
                 .requires(ModBlocks.AZURITE_BLOCK)
                 .requires(Items.BLAZE_POWDER)
-                .unlockedBy(getHasName(ModItems.HOOK.get()), has(ModItems.HOOK))
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
                 .group("azurites")
                 .save(output, "examplemod:azurite_from_blaze_powder");
 
@@ -82,8 +82,8 @@ public class ModRecipeProvider extends RecipeProvider {
                 ModBlocks.AZURITE_NETHER_ORE,
                 ModBlocks.AZURITE_END_ORE);
 
-        oreSmelting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.HOOK.get(), 0.25f, 100, "azurite");
-        oreBlasting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.HOOK.get(), 0.25f, 50, "azurite");
+        oreSmelting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.AZURITE.get(), 0.25f, 100, "azurite");
+        oreBlasting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.AZURITE.get(), 0.25f, 50, "azurite");
     }
 
     @Override

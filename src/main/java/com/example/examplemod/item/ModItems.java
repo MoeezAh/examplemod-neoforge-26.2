@@ -10,7 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ExampleMod.MOD_ID);
 
-    public static final DeferredItem<Item> HOOK = ITEMS.registerSimpleItem("hook");
+    public static final DeferredItem<Item> AZURITE = ITEMS.registerSimpleItem("azurite");
     public static final DeferredItem<Item> RAW_AZURITE = ITEMS.registerSimpleItem("raw_azurite");
 
     public static void register(IEventBus eventBus) {

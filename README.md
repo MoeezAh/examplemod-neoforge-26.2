@@ -13,7 +13,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 ### Items
 
 - **Raw Azurite** — the unprocessed Azurite resource.
-- **Azurite** — the processed resource currently registered in-game as `examplemod:hook`.
+- **Azurite** — the processed resource currently registered in-game as `examplemod:azurite`.
 
 ### Blocks
 

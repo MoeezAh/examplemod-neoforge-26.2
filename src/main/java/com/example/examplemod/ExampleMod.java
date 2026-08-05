@@ -115,7 +115,7 @@ public class ExampleMod {
         // }
 
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.HOOK);
+            event.accept(ModItems.AZURITE);
             event.accept(ModItems.RAW_AZURITE);
         }
 

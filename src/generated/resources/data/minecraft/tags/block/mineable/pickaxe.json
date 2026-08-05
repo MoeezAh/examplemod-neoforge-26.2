@@ -1,0 +1,10 @@
+{
+  "values": [
+    "examplemod:azurite_block",
+    "examplemod:raw_azurite_block",
+    "examplemod:azurite_ore",
+    "examplemod:azurite_deepslate_ore",
+    "examplemod:azurite_nether_ore",
+    "examplemod:azurite_end_ore"
+  ]
+}

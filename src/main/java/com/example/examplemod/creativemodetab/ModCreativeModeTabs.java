@@ -21,12 +21,12 @@ public class ModCreativeModeTabs {
     
     public static final Supplier<CreativeModeTab> AZURITE_ITEMS_TAB =
         CREATIVE_MODE_TABS.register("example_items_tab", () -> CreativeModeTab.builder()
-        .icon(() -> new ItemStack(ModItems.HOOK.get()))
+        .icon(() -> new ItemStack(ModItems.AZURITE.get()))
         .title(Component.translatable("creativetab.examplemod.exampleitems"))
         .withTabsBefore(CreativeModeTabs.INGREDIENTS)
         .withTabsAfter(Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "example_blocks_tab"))
         .displayItems((itemDisplayParameter, output) -> {
-            output.accept(ModItems.HOOK);
+            output.accept(ModItems.AZURITE);
             output.accept(ModItems.RAW_AZURITE);
         })
         .build());
