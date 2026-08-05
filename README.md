@@ -14,6 +14,11 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 
 - **Raw Azurite** — the unprocessed Azurite resource.
 - **Azurite** — the processed resource currently registered in-game as `examplemod:azurite`.
+- **Metal Detector** — a 64-use tool for finding iron and diamond ores below the selected block.
+
+### Metal Detector
+
+Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first iron or diamond ore, including their deepslate variants. When it finds one, the detector reports the block name and coordinates, plays an amethyst chime, and shows block particles. If nothing is found, it displays **"No valuables found."** Each use consumes one durability point.
 
 ### Blocks
 
@@ -38,7 +43,7 @@ The ore variants award experience when mined. Azurite and Raw Azurite blocks req
 
 The mod includes two Creative Mode tabs:
 
-- **Example Items**: Raw Azurite and Azurite.
+- **Example Items**: Raw Azurite, Azurite, and the Metal Detector.
 - **Example Blocks**: All Azurite blocks and ore variants.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
@@ -58,6 +63,10 @@ Run the following from the project root on Windows:
 ```
 
 The built JAR will be written to `build/libs`.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector.
 
 ## License
 

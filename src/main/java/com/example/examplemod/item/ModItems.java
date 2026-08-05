@@ -1,6 +1,7 @@
 package com.example.examplemod.item;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.item.custom.MetalDetectorItem;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -12,6 +13,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> AZURITE = ITEMS.registerSimpleItem("azurite");
     public static final DeferredItem<Item> RAW_AZURITE = ITEMS.registerSimpleItem("raw_azurite");
+
+    public static final DeferredItem<Item> METAL_DETECTOR = ITEMS.registerItem("metal_detector"
+    , props -> new MetalDetectorItem(props.durability(64)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
