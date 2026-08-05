@@ -1,25 +1,64 @@
+# Example Mod — Azurite Content
 
-Installation information
-=======
+A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introduces Azurite resources, ores, storage blocks, recipes, and dedicated Creative Mode tabs.
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+## Compatibility
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+- Minecraft `26.2`
+- NeoForge `26.2.0.41-beta` or newer
+- Mod ID: `examplemod`
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Content
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+### Items
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+- **Raw Azurite** — the unprocessed Azurite resource.
+- **Azurite** — the processed resource currently registered in-game as `examplemod:hook`.
+
+### Blocks
+
+- Block of Azurite
+- Block of Raw Azurite
+- Azurite Ore
+- Deepslate Azurite Ore
+- Nether Azurite Ore
+- End Azurite Ore
+
+The ore variants award experience when mined. Azurite and Raw Azurite blocks require the correct harvesting tool and use an amethyst-like sound; ore blocks likewise require the correct tool.
+
+## Obtaining Azurite
+
+- Smelt or blast Raw Azurite or any Azurite ore variant to obtain Azurite.
+- Smelting awards `0.25` experience and takes 100 ticks; blasting takes 50 ticks.
+- Craft nine Azurite into one Block of Azurite.
+- Break down one Block of Azurite into nine Azurite.
+- Combine a Block of Azurite with Blaze Powder to receive eighteen Azurite.
+
+## Creative Mode
+
+The mod includes two Creative Mode tabs:
+
+- **Example Items**: Raw Azurite and Azurite.
+- **Example Blocks**: All Azurite blocks and ore variants.
+
+Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
+
+## Installation
+
+1. Install the compatible NeoForge version for Minecraft 26.2.
+2. Place the built mod JAR in your instance's `mods` folder.
+3. Launch Minecraft using the NeoForge profile.
+
+## Building from Source
+
+Run the following from the project root on Windows:
+
+```powershell
+.\gradlew.bat build
+```
+
+The built JAR will be written to `build/libs`.
+
+## License
+
+This project is marked as `MIT Reserved` in its mod metadata.
