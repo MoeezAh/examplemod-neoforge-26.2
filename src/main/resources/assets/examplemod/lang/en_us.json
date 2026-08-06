@@ -15,6 +15,7 @@
   "block.examplemod.magic_block": "Magic Block",
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",
+  "item.examplemod.onion": "Onion",
 
   "examplemod.configuration.title": "Example Mod Configs",
   "examplemod.configuration.section.examplemod.common.toml": "Example Mod Configs",

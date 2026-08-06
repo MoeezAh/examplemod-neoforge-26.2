@@ -15,6 +15,11 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Raw Azurite** — the unprocessed Azurite resource.
 - **Azurite** — the processed resource currently registered in-game as `examplemod:azurite`.
 - **Metal Detector** — a 64-use tool for finding iron and diamond ores below the selected block.
+- **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
+
+### Onion
+
+Eating an Onion takes 2.1 seconds. Each serving has a 10% chance to apply **Nausea** for 20 seconds.
 
 ### Metal Detector
 
@@ -48,7 +53,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 
 The mod includes two Creative Mode tabs:
 
-- **Example Items**: Raw Azurite, Azurite, and the Metal Detector.
+- **Example Items**: Raw Azurite, Azurite, the Metal Detector, and Onion.
 - **Example Blocks**: All Azurite blocks and ore variants, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
@@ -71,7 +76,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector and Magic Block.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, and Onion.
 
 ## License
 
