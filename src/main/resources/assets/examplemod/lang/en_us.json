@@ -18,6 +18,11 @@
   "item.examplemod.onion": "Onion",
   "item.examplemod.end_fire_starter": "End Fire Starter",
 
+  "tooltip.examplemod.onion.tooltip": "Tasts like Onion.",
+  "tooltip.examplemod.magic_block.tooltip": "Its quite §9MAGICAL§r.",
+  "tooltip.examplemod.metal_detector.shift_down": "Discover valuables by clicking on blocks.",
+  "tooltip.examplemod.metal_detector": "Press §eShift§r for more information.",
+
   "examplemod.configuration.title": "Example Mod Configs",
   "examplemod.configuration.section.examplemod.common.toml": "Example Mod Configs",
   "examplemod.configuration.section.examplemod.common.toml.title": "Example Mod Configs",

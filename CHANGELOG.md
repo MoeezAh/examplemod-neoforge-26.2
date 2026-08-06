@@ -21,6 +21,9 @@ All notable changes to this project are documented in this file.
 - Empty-hand use of the Magic Block produces an end-rod particle and an amethyst sound.
 - Players standing on the Magic Block receive the Glowing effect for 300 ticks (15 seconds).
 - Item entities containing iron ingots, Azurite, or redstone transform one-for-one into diamonds when they touch the Magic Block.
+- Added an Onion tooltip: `Tasts like Onion.`
+- Added a Magic Block tooltip identifying it as magical.
+- Added Shift-sensitive Metal Detector tooltips: the default prompt asks players to hold Shift, while the expanded tooltip explains how to discover valuables.
 
 ### Changed
 
