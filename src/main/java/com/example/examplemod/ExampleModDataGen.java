@@ -6,6 +6,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.example.examplemod.datagen.ModBlockLootTableProvider;
 import com.example.examplemod.datagen.ModBlockTagsProvider;
+import com.example.examplemod.datagen.ModDataMapProvider;
 import com.example.examplemod.datagen.ModModelProvider;
 import com.example.examplemod.datagen.ModRecipeProvider;
 
@@ -34,5 +35,6 @@ public class ExampleModDataGen {
                         LootContextParamSets.BLOCK)),
                 lookupProvider));
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
+        generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
     }
 }

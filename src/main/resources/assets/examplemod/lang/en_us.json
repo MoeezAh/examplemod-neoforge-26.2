@@ -16,6 +16,7 @@
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",
   "item.examplemod.onion": "Onion",
+  "item.examplemod.end_fire_starter": "End Fire Starter",
 
   "examplemod.configuration.title": "Example Mod Configs",
   "examplemod.configuration.section.examplemod.common.toml": "Example Mod Configs",

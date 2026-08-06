@@ -16,6 +16,11 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Azurite** — the processed resource currently registered in-game as `examplemod:azurite`.
 - **Metal Detector** — a 64-use tool for finding iron and diamond ores below the selected block.
 - **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
+- **End Fire Starter** — a furnace fuel item that stacks to 32.
+
+### End Fire Starter
+
+Each End Fire Starter burns for 4,800 furnace ticks (4 minutes), enough to smelt 24 standard items.
 
 ### Onion
 
@@ -53,7 +58,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 
 The mod includes two Creative Mode tabs:
 
-- **Example Items**: Raw Azurite, Azurite, the Metal Detector, and Onion.
+- **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, and End Fire Starter.
 - **Example Blocks**: All Azurite blocks and ore variants, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
@@ -76,7 +81,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, and Onion.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, and End Fire Starter.
 
 ## License
 
