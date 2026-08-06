@@ -1,6 +1,6 @@
 package com.example.examplemod.blocks.custom;
 
-import com.example.examplemod.item.ModItems;
+import com.example.examplemod.tags.ModTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -51,8 +51,9 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack item) {
-        return item.is(Items.IRON_INGOT)
-            || item.is(ModItems.AZURITE)
-            || item.is(Items.REDSTONE);
+        // return item.is(Items.IRON_INGOT)
+        // || item.is(ModItems.AZURITE)
+        // || item.is(Items.REDSTONE);
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 }

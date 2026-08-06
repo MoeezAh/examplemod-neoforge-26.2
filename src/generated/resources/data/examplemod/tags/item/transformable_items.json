@@ -1,0 +1,8 @@
+{
+  "values": [
+    "#minecraft:iron_ores",
+    "minecraft:redstone",
+    "minecraft:copper_ingot",
+    "examplemod:azurite"
+  ]
+}

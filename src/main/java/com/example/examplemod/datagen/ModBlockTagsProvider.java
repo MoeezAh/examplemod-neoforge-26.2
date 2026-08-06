@@ -4,6 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.ModBlocks;
+import com.example.examplemod.tags.ModTags;
 
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
@@ -36,6 +37,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         
         tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
             .add(ModBlocks.AZURITE_END_ORE.getKey());
+
+        tag(ModTags.Blocks.METAL_DETECTABLES)
+            .addTag(Tags.Blocks.ORES);
     }
 
 }

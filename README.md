@@ -28,7 +28,7 @@ Eating an Onion takes 2.1 seconds. Each serving has a 10% chance to apply **Naus
 
 ### Metal Detector
 
-Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first iron or diamond ore, including their deepslate variants. When it finds one, the detector reports the block name and coordinates, plays an amethyst chime, and shows block particles. If nothing is found, it displays **"No valuables found."** Each use consumes one durability point. Hovering it prompts you to hold Shift; holding Shift displays usage guidance.
+Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first ore in the common `c:ores` tag. When it finds one, the detector reports the block name and coordinates, plays an amethyst chime, and shows block particles. If nothing is found, it displays **"No valuables found."** Each use consumes one durability point. Hovering it prompts you to hold Shift; holding Shift displays usage guidance.
 
 ### Blocks
 
@@ -44,7 +44,7 @@ The ore variants award experience when mined. Azurite and Raw Azurite blocks req
 
 ### Magic Block
 
-The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron ingot, Azurite, or redstone. Its tooltip identifies it as magical.
+The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron-ore-tagged item, redstone, a copper ingot, or Azurite. Its tooltip identifies it as magical.
 
 ## Obtaining Azurite
 
