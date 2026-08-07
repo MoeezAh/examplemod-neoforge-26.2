@@ -82,8 +82,17 @@ public class ModRecipeProvider extends RecipeProvider {
                 ModBlocks.AZURITE_NETHER_ORE,
                 ModBlocks.AZURITE_END_ORE);
 
-        oreSmelting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.AZURITE.get(), 0.25f, 100, "azurite");
-        oreBlasting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.AZURITE.get(), 0.25f, 50, "azurite");
+        oreSmelting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.AZURITE.get(), 0.25f,
+                100, "azurite");
+        oreBlasting(AZURITE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, ModItems.AZURITE.get(), 0.25f,
+                50, "azurite");
+
+        stairBuilder(ModBlocks.AZURITE_STAIRS.get(), Ingredient.of(ModBlocks.AZURITE_BLOCK))
+                .unlockedBy(getHasName(ModBlocks.AZURITE_BLOCK.get()), has(ModBlocks.AZURITE_BLOCK))
+                .group("azurite")
+                .save(output);
+
+        slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZURITE_SLAB, ModBlocks.AZURITE_BLOCK);
     }
 
     @Override
@@ -95,7 +104,8 @@ public class ModRecipeProvider extends RecipeProvider {
                     .generic(Ingredient.of(item), craftingCategory, cookingCategory, result, experience, cookingTime,
                             factory)
                     .group(group).unlockedBy(getHasName(item), this.has(item))
-                    .save(this.output, ExampleMod.MOD_ID + ":" + getItemName(result) + fromDesc + "_" + getItemName(item));
+                    .save(this.output,
+                            ExampleMod.MOD_ID + ":" + getItemName(result) + fromDesc + "_" + getItemName(item));
         }
     }
 

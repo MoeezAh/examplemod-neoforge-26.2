@@ -23,7 +23,6 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
-
     public ModBlockLootTableProvider(Provider registries) {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags(), registries);
     }
@@ -32,27 +31,34 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     protected void generate() {
         dropSelf(ModBlocks.AZURITE_BLOCK.get());
         dropSelf(ModBlocks.RAW_AZURITE_BLOCK.get());
-        
+
         add(ModBlocks.AZURITE_ORE.get(),
                 createOreDrop(ModBlocks.AZURITE_ORE.get(), ModItems.RAW_AZURITE.get()));
         add(ModBlocks.AZURITE_DEEPSLATE_ORE.get(),
                 createOreDrop(ModBlocks.AZURITE_DEEPSLATE_ORE.get(), ModItems.RAW_AZURITE.get()));
 
-        add(ModBlocks.AZURITE_NETHER_ORE.get(),
-                createMultipleOreDrops(ModBlocks.AZURITE_NETHER_ORE.get(), ModItems.RAW_AZURITE.get(), 4f, 7f));
+        add(ModBlocks.AZURITE_NETHER_ORE.get(), createMultipleOreDrops(
+                ModBlocks.AZURITE_NETHER_ORE.get(), ModItems.RAW_AZURITE.get(), 4f, 7f));
 
-        add(ModBlocks.AZURITE_END_ORE.get(),
-                createMultipleOreDrops(ModBlocks.AZURITE_END_ORE.get(), ModItems.RAW_AZURITE.get(), 5f, 9f));
+        add(ModBlocks.AZURITE_END_ORE.get(), createMultipleOreDrops(ModBlocks.AZURITE_END_ORE.get(),
+                ModItems.RAW_AZURITE.get(), 5f, 9f));
 
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
+        dropSelf(ModBlocks.AZURITE_STAIRS.get());
+
+        add(ModBlocks.AZURITE_SLAB.get(), block -> createSlabItemTable(block));
     }
 
-    protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops, float maxDrops) {
+    protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops,
+            float maxDrops) {
         HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
         return this.createSilkTouchDispatchTable(block,
-                (LootPoolEntryContainer.Builder) this.applyExplosionDecay(block, LootItem.lootTableItem(item)
-                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrops, maxDrops)))
-                        .apply(ApplyBonusCount.addOreBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))));
+                (LootPoolEntryContainer.Builder) this.applyExplosionDecay(block,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction
+                                        .setCount(UniformGenerator.between(minDrops, maxDrops)))
+                                .apply(ApplyBonusCount.addOreBonusCount(
+                                        enchantments.getOrThrow(Enchantments.FORTUNE)))));
     }
 
     @Override

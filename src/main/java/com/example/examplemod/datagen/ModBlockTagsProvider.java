@@ -21,25 +21,27 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(Provider arg0) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .add(ModBlocks.AZURITE_BLOCK.getKey())
-            .add(ModBlocks.RAW_AZURITE_BLOCK.getKey())
-            .add(ModBlocks.AZURITE_ORE.getKey())
-            .add(ModBlocks.AZURITE_DEEPSLATE_ORE.getKey())
-            .add(ModBlocks.AZURITE_NETHER_ORE.getKey())
-            .add(ModBlocks.AZURITE_END_ORE.getKey())
-            .add(ModBlocks.MAGIC_BLOCK.getKey());
+                .add(ModBlocks.AZURITE_BLOCK.getKey())
+                .add(ModBlocks.RAW_AZURITE_BLOCK.getKey())
+                .add(ModBlocks.AZURITE_ORE.getKey())
+                .add(ModBlocks.AZURITE_DEEPSLATE_ORE.getKey())
+                .add(ModBlocks.AZURITE_NETHER_ORE.getKey())
+                .add(ModBlocks.AZURITE_END_ORE.getKey())
+                .add(ModBlocks.MAGIC_BLOCK.getKey())
+                .add(ModBlocks.AZURITE_STAIRS.getKey())
+                .add(ModBlocks.AZURITE_SLAB.getKey());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-            .add(ModBlocks.AZURITE_DEEPSLATE_ORE.getKey());
+                .add(ModBlocks.AZURITE_DEEPSLATE_ORE.getKey());
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
-            .add(ModBlocks.AZURITE_NETHER_ORE.getKey());
-        
+                .add(ModBlocks.AZURITE_NETHER_ORE.getKey());
+
         tag(Tags.Blocks.NEEDS_NETHERITE_TOOL)
-            .add(ModBlocks.AZURITE_END_ORE.getKey());
+                .add(ModBlocks.AZURITE_END_ORE.getKey());
 
         tag(ModTags.Blocks.METAL_DETECTABLES)
-            .addTag(Tags.Blocks.ORES);
+                .addTag(Tags.Blocks.ORES);
     }
 
 }

@@ -38,9 +38,15 @@ Use the Metal Detector on a block to scan vertically downward, starting at the s
 - Deepslate Azurite Ore
 - Nether Azurite Ore
 - End Azurite Ore
+- Azurite Stairs
+- Azurite Slab
 - Magic Block
 
-The ore variants award experience when mined. Azurite and Raw Azurite blocks require the correct harvesting tool and use an amethyst-like sound; ore blocks likewise require the correct tool.
+The ore variants award experience when mined. Azurite blocks, stairs, and slabs require the correct pickaxe for drops and use amethyst-like sounds; ore blocks likewise require the correct tool.
+
+### Azurite Building Blocks
+
+Azurite Stairs and Azurite Slabs are decorative building variants of the Block of Azurite. Craft 4 stairs from 6 Blocks of Azurite in the standard stair pattern, or craft 6 slabs from 3 Blocks of Azurite in a row. Stairs drop themselves when broken; a double slab drops 2 slabs. Their tooltips describe them as “The cool Azurite stairs” and “The flat slab of Azurite.”
 
 ### Magic Block
 
@@ -59,7 +65,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 The mod includes two Creative Mode tabs:
 
 - **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, and End Fire Starter.
-- **Example Blocks**: All Azurite blocks and ore variants, plus the Magic Block.
+- **Example Blocks**: All Azurite blocks and ore variants, including Azurite Stairs and Slabs, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
 
@@ -81,7 +87,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, and End Fire Starter.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building blocks.
 
 ## License
 

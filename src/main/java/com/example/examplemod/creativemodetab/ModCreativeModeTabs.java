@@ -16,27 +16,26 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModCreativeModeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
-            .create(Registries.CREATIVE_MODE_TAB, ExampleMod.MOD_ID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExampleMod.MOD_ID);
 
-    public static final Supplier<CreativeModeTab> AZURITE_ITEMS_TAB = CREATIVE_MODE_TABS.register("example_items_tab",
-            () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModItems.AZURITE.get()))
+    public static final Supplier<CreativeModeTab> AZURITE_ITEMS_TAB = CREATIVE_MODE_TABS.register(
+            "example_items_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.AZURITE.get()))
                     .title(Component.translatable("creativetab.examplemod.exampleitems"))
-                    .withTabsBefore(CreativeModeTabs.INGREDIENTS)
-                    .withTabsAfter(Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "example_blocks_tab"))
+                    .withTabsBefore(CreativeModeTabs.INGREDIENTS).withTabsAfter(Identifier
+                            .fromNamespaceAndPath(ExampleMod.MOD_ID, "example_blocks_tab"))
                     .displayItems((itemDisplayParameter, output) -> {
                         output.accept(ModItems.AZURITE);
                         output.accept(ModItems.RAW_AZURITE);
                         output.accept(ModItems.METAL_DETECTOR);
                         output.accept(ModItems.ONION);
                         output.accept(ModItems.END_FIRE_STARTER);
-                    })
-                    .build());
+                    }).build());
 
-    public static final Supplier<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("example_blocks_tab",
-            () -> CreativeModeTab.builder()
-                    .icon(() -> new ItemStack(ModBlocks.AZURITE_BLOCK.get()))
+    public static final Supplier<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register(
+            "example_blocks_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.AZURITE_BLOCK.get()))
                     .title(Component.translatable("creativetab.examplemod.exampleblocks"))
                     .displayItems((itemDisplayParameter, output) -> {
                         output.accept(ModBlocks.AZURITE_BLOCK);
@@ -47,8 +46,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.AZURITE_END_ORE);
 
                         output.accept(ModBlocks.MAGIC_BLOCK);
-                    })
-                    .build());
+                        output.accept(ModBlocks.AZURITE_STAIRS);
+                        output.accept(ModBlocks.AZURITE_SLAB);
+                    }).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
