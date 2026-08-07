@@ -40,6 +40,8 @@ Use the Metal Detector on a block to scan vertically downward, starting at the s
 - End Azurite Ore
 - Azurite Stairs
 - Azurite Slab
+- Azurite Pressure Plate
+- Azurite Button
 - Magic Block
 
 The ore variants award experience when mined. Azurite blocks, stairs, and slabs require the correct pickaxe for drops and use amethyst-like sounds; ore blocks likewise require the correct tool.
@@ -47,6 +49,10 @@ The ore variants award experience when mined. Azurite blocks, stairs, and slabs 
 ### Azurite Building Blocks
 
 Azurite Stairs and Azurite Slabs are decorative building variants of the Block of Azurite. Craft 4 stairs from 6 Blocks of Azurite in the standard stair pattern, or craft 6 slabs from 3 Blocks of Azurite in a row. Stairs drop themselves when broken; a double slab drops 2 slabs. Their tooltips describe them as “The cool Azurite stairs” and “The flat slab of Azurite.”
+
+### Azurite Redstone Components
+
+Azurite Pressure Plates and Buttons provide redstone input using Block of Azurite. Craft one button from 1 Block of Azurite, or one pressure plate from 2 Blocks of Azurite placed side-by-side. The button uses iron-button behavior and remains pressed for 20 ticks (1 second). Both components drop themselves when broken and have custom tooltips.
 
 ### Magic Block
 
@@ -65,7 +71,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 The mod includes two Creative Mode tabs:
 
 - **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, and End Fire Starter.
-- **Example Blocks**: All Azurite blocks and ore variants, including Azurite Stairs and Slabs, plus the Magic Block.
+- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, a Pressure Plate, and a Button, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
 
@@ -87,7 +93,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building blocks.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building and redstone blocks.
 
 ## License
 

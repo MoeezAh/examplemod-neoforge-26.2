@@ -16,8 +16,8 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModCreativeModeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExampleMod.MOD_ID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
+            .create(Registries.CREATIVE_MODE_TAB, ExampleMod.MOD_ID);
 
     public static final Supplier<CreativeModeTab> AZURITE_ITEMS_TAB = CREATIVE_MODE_TABS.register(
             "example_items_tab",
@@ -46,8 +46,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.AZURITE_END_ORE);
 
                         output.accept(ModBlocks.MAGIC_BLOCK);
+
                         output.accept(ModBlocks.AZURITE_STAIRS);
                         output.accept(ModBlocks.AZURITE_SLAB);
+
+                        output.accept(ModBlocks.AZURITE_PRESSURE_PLATE);
+                        output.accept(ModBlocks.AZURITE_BUTTON);
                     }).build());
 
     public static void register(IEventBus eventBus) {

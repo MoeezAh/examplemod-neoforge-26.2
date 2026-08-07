@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "examplemod:azurite_block"
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "id": "examplemod:azurite_pressure_plate"
+  }
+}

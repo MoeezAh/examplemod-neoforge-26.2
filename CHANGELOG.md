@@ -21,6 +21,9 @@ All notable changes to this project are documented in this file.
 - Added **Azurite Stairs** (`examplemod:azurite_stairs`) and **Azurite Slabs** (`examplemod:azurite_slab`) as pickaxe-mineable building blocks that require the correct tool for drops.
 - Added crafting recipes: 6 Blocks of Azurite make 4 Azurite Stairs, and 3 Blocks of Azurite make 6 Azurite Slabs.
 - Added generated blockstates, models, item definitions, loot tables, recipe advancements, and localized tooltips for Azurite Stairs and Slabs.
+- Added **Azurite Pressure Plate** (`examplemod:azurite_pressure_plate`) and **Azurite Button** (`examplemod:azurite_button`) redstone components.
+- Added recipes: 2 Blocks of Azurite make a pressure plate, and 1 Block of Azurite makes a button. The button uses iron-button behavior with a 20-tick press duration.
+- Added generated models, blockstates, item definitions, loot tables, recipe advancements, block tags, and localized tooltips for the Azurite Pressure Plate and Button.
 - Empty-hand use of the Magic Block produces an end-rod particle and an amethyst sound.
 - Players standing on the Magic Block receive the Glowing effect for 300 ticks (15 seconds).
 - Item entities containing iron-ore-tagged items, redstone, copper ingots, or Azurite transform one-for-one into diamonds when they touch the Magic Block.
@@ -38,6 +41,8 @@ All notable changes to this project are documented in this file.
 - Added a NeoForge furnace-fuel data-map provider and generated fuel data for the End Fire Starter.
 - Added the Magic Block to the **Example Blocks** Creative Mode tab.
 - Added Azurite Stairs and Slabs to the **Example Blocks** Creative Mode tab.
+- Added the Azurite Pressure Plate and Button to the **Example Blocks** Creative Mode tab.
 - Added Magic Block model generation, pickaxe mining-tag data, and self-drop loot generation.
 - Added block-family model generation, pickaxe mining tags, and loot handling for Azurite Stairs and Slabs.
+- Added block-family model generation and standard button/pressure-plate tags for the Azurite redstone components.
 - Added data-generated item and block tags: `examplemod:transformable_items` configures Magic Block transmutation inputs, and `examplemod:metal_detectables` includes all `c:ores` for the Metal Detector.

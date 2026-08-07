@@ -10,11 +10,17 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -76,6 +82,20 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST)),
             Component.translatable("tooltip.examplemod.azurite_slab.tooltip"));
+
+    public static final DeferredBlock<Block> AZURITE_PRESSURE_PLATE = registerBlock("azurite_pressure_plate",
+            properties -> new PressurePlateBlock(BlockSetType.IRON, properties.mapColor(MapColor.COLOR_BLUE)
+                    .forceSolidOn()
+                    .instrument(NoteBlockInstrument.BASS)
+                    .noCollision()
+                    .strength(0.5f)
+                    .pushReaction(PushReaction.DESTROY)),
+            Component.translatable("tooltip.examplemod.azurite_pressure_plate.tooltip"));
+
+    public static final DeferredBlock<Block> AZURITE_BUTTON = registerBlock("azurite_button",
+            properties -> new ButtonBlock(BlockSetType.IRON, 20,
+                    properties.noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)),
+            Component.translatable("tooltip.examplemod.azurite_button.tooltip"));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Function<BlockBehaviour.Properties, T> function, Component... components) {

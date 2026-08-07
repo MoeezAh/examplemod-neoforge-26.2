@@ -93,6 +93,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .save(output);
 
         slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZURITE_SLAB, ModBlocks.AZURITE_BLOCK);
+
+        buttonBuilder(ModBlocks.AZURITE_BUTTON, Ingredient.of(ModBlocks.AZURITE_BLOCK))
+                .unlockedBy(getHasName(ModBlocks.AZURITE_BLOCK.get()), has(ModBlocks.AZURITE_BLOCK))
+                .group("azurite")
+                .save(output);
+
+        pressurePlate(ModBlocks.AZURITE_PRESSURE_PLATE, ModBlocks.AZURITE_BLOCK);
     }
 
     @Override

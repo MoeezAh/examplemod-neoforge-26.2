@@ -42,6 +42,18 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(ModTags.Blocks.METAL_DETECTABLES)
                 .addTag(Tags.Blocks.ORES);
+
+        tag(BlockTags.STAIRS)
+                .add(ModBlocks.AZURITE_STAIRS.getKey());
+
+        tag(BlockTags.SLABS)
+                .add(ModBlocks.AZURITE_SLAB.getKey());
+
+        tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.AZURITE_PRESSURE_PLATE.getKey());
+
+        tag(BlockTags.BUTTONS)
+                .add(ModBlocks.AZURITE_BUTTON.getKey());
     }
 
 }

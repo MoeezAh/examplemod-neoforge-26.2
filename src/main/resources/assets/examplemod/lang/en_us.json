@@ -15,6 +15,8 @@
   "block.examplemod.magic_block": "Magic Block",
   "block.examplemod.azurite_stairs": "Azurite Stairs",
   "block.examplemod.azurite_slab": "Azurite Slab",
+  "block.examplemod.azurite_pressure_plate": "Azurite Pressure Plate",
+  "block.examplemod.azurite_button": "Azurite Button",
 
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",
@@ -27,6 +29,8 @@
   "tooltip.examplemod.metal_detector": "§7Press §eShift§7 for more information§r",
   "tooltip.examplemod.azurite_stairs.tooltip": "§7The cool Azurite stairs§r",
   "tooltip.examplemod.azurite_slab.tooltip": "§7The flat slab of Azurite§r",
+  "tooltip.examplemod.azurite_pressure_plate.tooltip": "§7The Azurite's pressure plate§r",
+  "tooltip.examplemod.azurite_button.tooltip": "§7The Azurite's button.§r",
 
   "examplemod.configuration.title": "Example Mod Configs",
   "examplemod.configuration.section.examplemod.common.toml": "Example Mod Configs",
