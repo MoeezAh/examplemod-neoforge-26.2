@@ -2,12 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": "examplemod:azurite"
+    "#": "minecraft:stick",
+    "W": "examplemod:azurite"
   },
   "pattern": [
-    "##"
+    "#W#",
+    "#W#"
   ],
   "result": {
-    "id": "examplemod:azurite_pressure_plate"
+    "id": "examplemod:azurite_fence_gate"
   }
 }

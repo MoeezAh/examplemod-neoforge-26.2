@@ -12,13 +12,17 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
+import net.minecraft.world.level.block.FenceBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
@@ -96,6 +100,18 @@ public class ModBlocks {
             properties -> new ButtonBlock(BlockSetType.IRON, 20,
                     properties.noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)),
             Component.translatable("tooltip.examplemod.azurite_button.tooltip"));
+
+    public static final DeferredBlock<Block> AZURITE_FENCE = registerBlock("azurite_fence",
+            properties -> new FenceBlock(properties.strength(2F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> AZURITE_FENCE_GATE = registerBlock("azurite_fence_gate",
+            properties -> new FenceGateBlock(WoodType.ACACIA, properties.strength(2F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> AZURITE_WALL = registerBlock("azurite_wall",
+            properties -> new WallBlock(properties.strength(2F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Function<BlockBehaviour.Properties, T> function, Component... components) {

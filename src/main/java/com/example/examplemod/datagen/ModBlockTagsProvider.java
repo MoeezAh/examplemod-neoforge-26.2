@@ -54,6 +54,15 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(BlockTags.BUTTONS)
                 .add(ModBlocks.AZURITE_BUTTON.getKey());
+
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.AZURITE_FENCE.getKey());
+
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.AZURITE_FENCE_GATE.getKey());
+
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.AZURITE_WALL.getKey());
     }
 
 }

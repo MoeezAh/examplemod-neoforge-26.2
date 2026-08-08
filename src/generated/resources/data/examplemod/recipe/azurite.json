@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "azurites",
   "ingredients": [
     "examplemod:azurite_block"
   ],

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "examplemod:azurite_button"
+        "recipe": "examplemod:azurite_fence_gate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "examplemod:azurite_button"
+      "examplemod:azurite_fence_gate"
     ]
   }
 }

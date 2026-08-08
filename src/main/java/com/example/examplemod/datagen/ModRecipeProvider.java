@@ -66,7 +66,7 @@ public class ModRecipeProvider extends RecipeProvider {
         shapeless(RecipeCategory.MISC, ModItems.AZURITE.get(), 9)
                 .requires(ModBlocks.AZURITE_BLOCK)
                 .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
-                .group("azurites")
+                // .group("azurites")
                 .save(output);
 
         shapeless(RecipeCategory.MISC, ModItems.AZURITE.get(), 18)
@@ -89,17 +89,29 @@ public class ModRecipeProvider extends RecipeProvider {
 
         stairBuilder(ModBlocks.AZURITE_STAIRS.get(), Ingredient.of(ModBlocks.AZURITE_BLOCK))
                 .unlockedBy(getHasName(ModBlocks.AZURITE_BLOCK.get()), has(ModBlocks.AZURITE_BLOCK))
-                .group("azurite")
+                // .group("azurite")
                 .save(output);
 
         slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZURITE_SLAB, ModBlocks.AZURITE_BLOCK);
 
-        buttonBuilder(ModBlocks.AZURITE_BUTTON, Ingredient.of(ModBlocks.AZURITE_BLOCK))
-                .unlockedBy(getHasName(ModBlocks.AZURITE_BLOCK.get()), has(ModBlocks.AZURITE_BLOCK))
-                .group("azurite")
+        buttonBuilder(ModBlocks.AZURITE_BUTTON, Ingredient.of(ModItems.AZURITE))
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                // .group("azurite")
                 .save(output);
 
-        pressurePlate(ModBlocks.AZURITE_PRESSURE_PLATE, ModBlocks.AZURITE_BLOCK);
+        pressurePlate(ModBlocks.AZURITE_PRESSURE_PLATE, ModItems.AZURITE);
+
+        fenceBuilder(ModBlocks.AZURITE_FENCE, Ingredient.of(ModItems.AZURITE))
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                // .group("azurite")
+                .save(output);
+
+        fenceGateBuilder(ModBlocks.AZURITE_FENCE_GATE, Ingredient.of(ModItems.AZURITE))
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                // .group("azurite")
+                .save(output);
+
+        wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZURITE_WALL, ModBlocks.AZURITE_BLOCK);
     }
 
     @Override

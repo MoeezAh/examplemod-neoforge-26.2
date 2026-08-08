@@ -17,6 +17,9 @@
   "block.examplemod.azurite_slab": "Azurite Slab",
   "block.examplemod.azurite_pressure_plate": "Azurite Pressure Plate",
   "block.examplemod.azurite_button": "Azurite Button",
+  "block.examplemod.azurite_fence": "Azurite Fence",
+  "block.examplemod.azurite_fence_gate": "Azurite Fence Gate",
+  "block.examplemod.azurite_wall": "Azurite Wall",
 
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",

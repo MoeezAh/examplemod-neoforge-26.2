@@ -5,7 +5,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 ## Compatibility
 
 - Minecraft `26.2`
-- NeoForge `26.2.0.41-beta` or newer
+- NeoForge `26.2.0.52-beta` or newer
 - Mod ID: `examplemod`
 
 ## Content
@@ -42,6 +42,9 @@ Use the Metal Detector on a block to scan vertically downward, starting at the s
 - Azurite Slab
 - Azurite Pressure Plate
 - Azurite Button
+- Azurite Fence
+- Azurite Fence Gate
+- Azurite Wall
 - Magic Block
 
 The ore variants award experience when mined. Azurite blocks, stairs, and slabs require the correct pickaxe for drops and use amethyst-like sounds; ore blocks likewise require the correct tool.
@@ -52,7 +55,11 @@ Azurite Stairs and Azurite Slabs are decorative building variants of the Block o
 
 ### Azurite Redstone Components
 
-Azurite Pressure Plates and Buttons provide redstone input using Block of Azurite. Craft one button from 1 Block of Azurite, or one pressure plate from 2 Blocks of Azurite placed side-by-side. The button uses iron-button behavior and remains pressed for 20 ticks (1 second). Both components drop themselves when broken and have custom tooltips.
+Azurite Pressure Plates and Buttons provide redstone input using Azurite. Craft one button from 1 Azurite, or one pressure plate from 2 Azurite placed side-by-side. The button uses iron-button behavior and remains pressed for 20 ticks (1 second). Both components drop themselves when broken and have custom tooltips.
+
+### Azurite Fencing
+
+Azurite Fences, Fence Gates, and Walls extend the Azurite building set. They require the correct tool for drops, use amethyst-like sounds, and drop themselves when broken. Craft 3 fences from 4 Azurite and 2 sticks; craft one fence gate from 2 Azurite and 4 sticks; or craft 6 walls from 6 Blocks of Azurite. The fence gate uses acacia gate behavior.
 
 ### Magic Block
 
@@ -71,7 +78,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 The mod includes two Creative Mode tabs:
 
 - **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, and End Fire Starter.
-- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, a Pressure Plate, and a Button, plus the Magic Block.
+- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, a Pressure Plate, Button, Fence, Fence Gate, and Wall, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
 
@@ -93,7 +100,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building and redstone blocks.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building, redstone, and fencing blocks.
 
 ## License
 

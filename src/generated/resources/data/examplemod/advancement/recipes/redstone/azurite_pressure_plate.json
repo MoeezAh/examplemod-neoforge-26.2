@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_azurite_block": {
+    "has_azurite": {
       "conditions": {
         "items": [
           {
-            "items": "examplemod:azurite_block"
+            "items": "examplemod:azurite"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_azurite_block"
+      "has_azurite"
     ]
   ],
   "rewards": {
