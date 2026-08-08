@@ -45,6 +45,8 @@ Use the Metal Detector on a block to scan vertically downward, starting at the s
 - Azurite Fence
 - Azurite Fence Gate
 - Azurite Wall
+- Azurite Door
+- Azurite Trapdoor
 - Magic Block
 
 The ore variants award experience when mined. Azurite blocks, stairs, and slabs require the correct pickaxe for drops and use amethyst-like sounds; ore blocks likewise require the correct tool.
@@ -60,6 +62,10 @@ Azurite Pressure Plates and Buttons provide redstone input using Azurite. Craft 
 ### Azurite Fencing
 
 Azurite Fences, Fence Gates, and Walls extend the Azurite building set. They require the correct tool for drops, use amethyst-like sounds, and drop themselves when broken. Craft 3 fences from 4 Azurite and 2 sticks; craft one fence gate from 2 Azurite and 4 sticks; or craft 6 walls from 6 Blocks of Azurite. The fence gate uses acacia gate behavior.
+
+### Azurite Access Blocks
+
+Azurite Doors and Trapdoors use iron-style, redstone-operated behavior. Both require the correct tool for drops, use amethyst-like sounds, and drop themselves when broken. Craft 3 doors from 6 Azurite arranged in two vertical columns, or craft 2 trapdoors from 6 Azurite arranged in two rows.
 
 ### Magic Block
 
@@ -78,7 +84,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 The mod includes two Creative Mode tabs:
 
 - **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, and End Fire Starter.
-- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, a Pressure Plate, Button, Fence, Fence Gate, and Wall, plus the Magic Block.
+- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, and Trapdoors, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
 
@@ -100,7 +106,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building, redstone, and fencing blocks.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building, redstone, fencing, and access blocks.
 
 ## License
 

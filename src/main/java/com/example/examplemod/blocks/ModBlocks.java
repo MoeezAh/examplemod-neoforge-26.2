@@ -10,7 +10,9 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BlockTypes;
 import net.minecraft.world.level.block.ButtonBlock;
+import net.minecraft.world.level.block.DoorBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.FenceBlock;
 import net.minecraft.world.level.block.FenceGateBlock;
@@ -18,7 +20,9 @@ import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.DoubleBlockCombiner.BlockType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -112,6 +116,14 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AZURITE_WALL = registerBlock("azurite_wall",
             properties -> new WallBlock(properties.strength(2F)
                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+    public static final DeferredBlock<Block> AZURITE_DOOR = registerBlock("azurite_door",
+            properties -> new DoorBlock(BlockSetType.IRON, properties.strength(2F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST).noOcclusion()));
+
+    public static final DeferredBlock<Block> AZURITE_TRAPDOOR = registerBlock("azurite_trapdoor",
+            properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(2F)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST).noOcclusion()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Function<BlockBehaviour.Properties, T> function, Component... components) {

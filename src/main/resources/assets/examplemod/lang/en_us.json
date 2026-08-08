@@ -20,6 +20,8 @@
   "block.examplemod.azurite_fence": "Azurite Fence",
   "block.examplemod.azurite_fence_gate": "Azurite Fence Gate",
   "block.examplemod.azurite_wall": "Azurite Wall",
+  "block.examplemod.azurite_door": "Azurite Door",
+  "block.examplemod.azurite_trapdoor": "Azurite Trapdoor",
 
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",

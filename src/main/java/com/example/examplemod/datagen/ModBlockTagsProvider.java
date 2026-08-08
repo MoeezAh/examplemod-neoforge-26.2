@@ -63,6 +63,12 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(BlockTags.WALLS)
                 .add(ModBlocks.AZURITE_WALL.getKey());
+
+        tag(BlockTags.DOORS)
+                .add(ModBlocks.AZURITE_DOOR.getKey());
+
+        tag(BlockTags.TRAPDOORS)
+                .add(ModBlocks.AZURITE_TRAPDOOR.getKey());
     }
 
 }
