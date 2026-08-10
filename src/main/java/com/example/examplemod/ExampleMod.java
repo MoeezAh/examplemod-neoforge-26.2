@@ -157,6 +157,12 @@ public class ExampleMod {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.AZURITE_SWORD);
             event.accept(ModItems.AZURITE_SPEAR);
+
+            event.accept(ModItems.AZURITE_HELMET);
+            event.accept(ModItems.AZURITE_CHESTPLATE);
+            event.accept(ModItems.AZURITE_LEGGINGS);
+            event.accept(ModItems.AZURITE_BOOTS);
+
         }
     }
 

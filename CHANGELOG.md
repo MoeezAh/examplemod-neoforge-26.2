@@ -21,6 +21,9 @@ All notable changes to this project are documented in this file.
 - Added the Azurite tool material: 1,200 durability, mining speed 3, attack bonus 3, enchantability 22, and Azurite repair material.
 - Added crafting recipes for every Azurite tool and the spear, plus generated item definitions, models, recipe advancements, and textures. The spear includes a dedicated in-hand model.
 - Added tool, weapon, repair, and mining-tier tags. The Azurite Pickaxe supports iron-tool blocks and the Magic Block.
+- Added the **Azurite Helmet**, **Chestplate**, **Leggings**, and **Boots**.
+- Added an Azurite armor material with a 1,200 durability multiplier, defense values of 5/9/7/5, 2 armor toughness, 0.1 knockback resistance, enchantability 16, and Azurite repair material.
+- Added armor recipes, localization, wearable textures, equipment asset definitions, armor-slot tags, and trim-compatible item models.
 - Added the **Magic Block** (`examplemod:magic_block`), including its texture, blockstate, item definition, model, and loot table.
 - Added **Azurite Stairs** (`examplemod:azurite_stairs`) and **Azurite Slabs** (`examplemod:azurite_slab`) as pickaxe-mineable building blocks that require the correct tool for drops.
 - Added crafting recipes: 6 Blocks of Azurite make 4 Azurite Stairs, and 3 Blocks of Azurite make 6 Azurite Slabs.
@@ -47,6 +50,7 @@ All notable changes to this project are documented in this file.
 - Added Onion to the **Example Items** Creative Mode tab.
 - Added End Fire Starter to the **Example Items** Creative Mode tab.
 - Added the Azurite Sword, Pickaxe, Axe, Shovel, and Spear to the **Example Items** Creative Mode tab.
+- Added the full Azurite armor set to the **Example Items** and Minecraft **Combat** Creative Mode tabs.
 - Added Metal Detector model generation to the data-generation provider.
 - Added Onion model generation to the data-generation provider.
 - Added a NeoForge furnace-fuel data-map provider and generated fuel data for the End Fire Starter.
@@ -61,5 +65,5 @@ All notable changes to this project are documented in this file.
 - Added block-family model generation and self-drop loot handling for the Azurite fencing set.
 - Added block-family model generation and door/trapdoor loot handling for the Azurite access blocks.
 - Added data-generated item and block tags: `examplemod:transformable_items` configures Magic Block transmutation inputs, and `examplemod:metal_detectables` includes all `c:ores` for the Metal Detector.
-- Updated the project requirement to NeoForge `26.2.0.52-beta`.
+- Updated the project requirement to NeoForge `26.2.0.57`.
 - Updated the Azurite Button and Pressure Plate recipes and unlock criteria to use Azurite instead of Blocks of Azurite.

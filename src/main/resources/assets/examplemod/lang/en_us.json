@@ -34,6 +34,12 @@
   "item.examplemod.azurite_hoe": "Azurite Hoe",
   "item.examplemod.azurite_spear": "Azurite Spear",
 
+  "item.examplemod.azurite_helmet": "Azurite Helmet",
+  "item.examplemod.azurite_chestplate": "Azurite Chestplate",
+  "item.examplemod.azurite_leggings": "Azurite Leggings",
+  "item.examplemod.azurite_boots": "Azurite Boots",
+
+
   "tooltip.examplemod.onion.tooltip": "§7Tasts like Onion.§r",
   "tooltip.examplemod.magic_block.tooltip": "§7Its quite §9MAGICAL§r.",
   "tooltip.examplemod.metal_detector.shift_down": "§7Discover valuables by clicking on blocks.§r",

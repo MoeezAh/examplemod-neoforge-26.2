@@ -9,6 +9,7 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -55,6 +56,22 @@ public class ModItems {
     public static final DeferredItem<Item> AZURITE_SPEAR = ITEMS.registerItem("azurite_spear",
             properties -> new Item(
                     properties.spear(ModToolTier.AZURITE, 0.95f, 0.7f, 0.7f, 3.5f, 13f, 8.5f, 5.1f, 13.37f, 4.67f)));
+
+    public static final DeferredItem<Item> AZURITE_HELMET = ITEMS.registerItem("azurite_helmet",
+            properties -> new Item(
+                    properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.HELMET)));
+
+    public static final DeferredItem<Item> AZURITE_CHESTPLATE = ITEMS.registerItem("azurite_chestplate",
+            properties -> new Item(
+                    properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+
+    public static final DeferredItem<Item> AZURITE_LEGGINGS = ITEMS.registerItem("azurite_leggings",
+            properties -> new Item(
+                    properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+
+    public static final DeferredItem<Item> AZURITE_BOOTS = ITEMS.registerItem("azurite_boots",
+            properties -> new Item(
+                    properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

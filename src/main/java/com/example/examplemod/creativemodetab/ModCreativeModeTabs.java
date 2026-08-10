@@ -37,6 +37,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AZURITE_SHOVEL);
                         output.accept(ModItems.AZURITE_HOE);
                         output.accept(ModItems.AZURITE_SPEAR);
+
+                        output.accept(ModItems.AZURITE_HELMET);
+                        output.accept(ModItems.AZURITE_CHESTPLATE);
+                        output.accept(ModItems.AZURITE_LEGGINGS);
+                        output.accept(ModItems.AZURITE_BOOTS);
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register(

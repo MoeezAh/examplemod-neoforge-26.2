@@ -48,6 +48,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         tag(ItemTags.SPEARS)
                 .add(ModItems.AZURITE_SPEAR.getKey());
+
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.AZURITE_HELMET.getKey());
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.AZURITE_CHESTPLATE.getKey());
+        tag(ItemTags.LEG_ARMOR).add(ModItems.AZURITE_LEGGINGS.getKey());
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.AZURITE_BOOTS.getKey());
     }
 
 }

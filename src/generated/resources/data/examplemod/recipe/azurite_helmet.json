@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "A": "examplemod:azurite"
+  },
+  "pattern": [
+    "AAA",
+    "A A"
+  ],
+  "result": {
+    "id": "examplemod:azurite_helmet"
+  }
+}

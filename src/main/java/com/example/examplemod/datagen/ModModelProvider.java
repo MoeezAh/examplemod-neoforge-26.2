@@ -2,6 +2,7 @@ package com.example.examplemod.datagen;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.ModBlocks;
+import com.example.examplemod.item.ModArmorMaterials;
 import com.example.examplemod.item.ModItems;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
@@ -29,6 +30,15 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.AZURITE_SHOVEL.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.AZURITE_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateSpear(ModItems.AZURITE_SPEAR.get());
+
+        itemModels.generateTrimmableItem(ModItems.AZURITE_HELMET.get(), ModArmorMaterials.AZURITE_KEY,
+                ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.AZURITE_CHESTPLATE.get(), ModArmorMaterials.AZURITE_KEY,
+                ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.AZURITE_LEGGINGS.get(), ModArmorMaterials.AZURITE_KEY,
+                ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.AZURITE_BOOTS.get(), ModArmorMaterials.AZURITE_KEY,
+                ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         /* BLOCKS */
 
