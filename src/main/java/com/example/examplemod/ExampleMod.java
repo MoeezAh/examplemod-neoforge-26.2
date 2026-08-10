@@ -163,6 +163,8 @@ public class ExampleMod {
             event.accept(ModItems.AZURITE_LEGGINGS);
             event.accept(ModItems.AZURITE_BOOTS);
 
+            event.accept(ModItems.AZURITE_HORSE_ARMOR);
+
         }
     }
 
