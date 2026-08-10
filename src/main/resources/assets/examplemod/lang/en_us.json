@@ -27,6 +27,12 @@
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",
   "item.examplemod.onion": "Onion",
   "item.examplemod.end_fire_starter": "End Fire Starter",
+  "item.examplemod.azurite_sword": "Azurite Sword",
+  "item.examplemod.azurite_pickaxe": "Azurite Pickaxe",
+  "item.examplemod.azurite_axe": "Azurite Axe",
+  "item.examplemod.azurite_shovel": "Azurite Shovel",
+  "item.examplemod.azurite_hoe": "Azurite Hoe",
+  "item.examplemod.azurite_spear": "Azurite Spear",
 
   "tooltip.examplemod.onion.tooltip": "§7Tasts like Onion.§r",
   "tooltip.examplemod.magic_block.tooltip": "§7Its quite §9MAGICAL§r.",

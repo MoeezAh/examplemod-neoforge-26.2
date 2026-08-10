@@ -14,9 +14,10 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 
 - **Raw Azurite** — the unprocessed Azurite resource.
 - **Azurite** — the processed resource currently registered in-game as `examplemod:azurite`.
-- **Metal Detector** — a 64-use tool for finding iron and diamond ores below the selected block.
+- **Metal Detector** — a 64-use tool for finding ores below the selected block.
 - **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
 - **End Fire Starter** — a furnace fuel item that stacks to 32.
+- **Azurite Equipment** — a sword, pickaxe, axe, shovel, hoe, and spear crafted from Azurite.
 
 ### End Fire Starter
 
@@ -29,6 +30,12 @@ Eating an Onion takes 2.1 seconds. Each serving has a 10% chance to apply **Naus
 ### Metal Detector
 
 Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first ore in the common `c:ores` tag. When it finds one, the detector reports the block name and coordinates, plays an amethyst chime, and shows block particles. If nothing is found, it displays **"No valuables found."** Each use consumes one durability point. Hovering it prompts you to hold Shift; holding Shift displays usage guidance.
+
+### Azurite Tools and Spear
+
+The Azurite tool set includes a sword, pickaxe, axe, shovel, hoe, and spear. All use an Azurite material with 1,200 durability, mining speed 3, attack bonus 3, enchantability 22, and Azurite repair material. The Azurite Pickaxe can mine iron-tool blocks and the Magic Block.
+
+Craft the sword with 2 Azurite and 1 stick; the pickaxe with 3 Azurite and 2 sticks; the shovel with 1 Azurite and 2 sticks; the axe or spear with 3 Azurite and 2 sticks; and the hoe with 2 Azurite and 2 sticks. The spear has dedicated held-item visuals.
 
 ### Blocks
 
@@ -83,7 +90,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 
 The mod includes two Creative Mode tabs:
 
-- **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, and End Fire Starter.
+- **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, End Fire Starter, Azurite Sword, Pickaxe, Axe, Shovel, and Spear.
 - **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, and Trapdoors, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks.
@@ -106,7 +113,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, and Azurite building, redstone, fencing, and access blocks.
+See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, Azurite tools, and Azurite building, redstone, fencing, and access blocks.
 
 ## License
 

@@ -17,6 +17,10 @@ All notable changes to this project are documented in this file.
 - Added the **End Fire Starter** fuel item (`examplemod:end_fire_starter`), which stacks to 32.
 - Each End Fire Starter burns for 4,800 furnace ticks (4 minutes), enough to smelt 24 standard items.
 - Added the End Fire Starter texture, localization, item definition, and item model.
+- Added the **Azurite Sword**, **Pickaxe**, **Axe**, **Shovel**, **Hoe**, and **Spear**.
+- Added the Azurite tool material: 1,200 durability, mining speed 3, attack bonus 3, enchantability 22, and Azurite repair material.
+- Added crafting recipes for every Azurite tool and the spear, plus generated item definitions, models, recipe advancements, and textures. The spear includes a dedicated in-hand model.
+- Added tool, weapon, repair, and mining-tier tags. The Azurite Pickaxe supports iron-tool blocks and the Magic Block.
 - Added the **Magic Block** (`examplemod:magic_block`), including its texture, blockstate, item definition, model, and loot table.
 - Added **Azurite Stairs** (`examplemod:azurite_stairs`) and **Azurite Slabs** (`examplemod:azurite_slab`) as pickaxe-mineable building blocks that require the correct tool for drops.
 - Added crafting recipes: 6 Blocks of Azurite make 4 Azurite Stairs, and 3 Blocks of Azurite make 6 Azurite Slabs.
@@ -42,6 +46,7 @@ All notable changes to this project are documented in this file.
 - Added the Metal Detector to the **Example Items** Creative Mode tab.
 - Added Onion to the **Example Items** Creative Mode tab.
 - Added End Fire Starter to the **Example Items** Creative Mode tab.
+- Added the Azurite Sword, Pickaxe, Axe, Shovel, and Spear to the **Example Items** Creative Mode tab.
 - Added Metal Detector model generation to the data-generation provider.
 - Added Onion model generation to the data-generation provider.
 - Added a NeoForge furnace-fuel data-map provider and generated fuel data for the End Fire Starter.

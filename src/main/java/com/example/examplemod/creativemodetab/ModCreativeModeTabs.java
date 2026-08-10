@@ -31,6 +31,12 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.METAL_DETECTOR);
                         output.accept(ModItems.ONION);
                         output.accept(ModItems.END_FIRE_STARTER);
+                        output.accept(ModItems.AZURITE_SWORD);
+                        output.accept(ModItems.AZURITE_PICKAXE);
+                        output.accept(ModItems.AZURITE_AXE);
+                        output.accept(ModItems.AZURITE_SHOVEL);
+                        output.accept(ModItems.AZURITE_HOE);
+                        output.accept(ModItems.AZURITE_SPEAR);
                     }).build());
 
     public static final Supplier<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register(

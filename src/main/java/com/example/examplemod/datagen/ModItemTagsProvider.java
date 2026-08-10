@@ -27,6 +27,27 @@ public class ModItemTagsProvider extends ItemTagsProvider {
                 .add(BlockItemIds.REDSTONE_DUST.item())
                 .add(ItemIds.COPPER_INGOT)
                 .add(ModItems.AZURITE.getKey());
+
+        tag(ModTags.Items.AZURITE_REPAIRABLE)
+                .add(ModItems.AZURITE.getKey());
+
+        tag(ItemTags.SWORDS)
+                .add(ModItems.AZURITE_SWORD.getKey());
+
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.AZURITE_PICKAXE.getKey());
+
+        tag(ItemTags.AXES)
+                .add(ModItems.AZURITE_AXE.getKey());
+
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.AZURITE_SHOVEL.getKey());
+
+        tag(ItemTags.HOES)
+                .add(ModItems.AZURITE_HOE.getKey());
+
+        tag(ItemTags.SPEARS)
+                .add(ModItems.AZURITE_SPEAR.getKey());
     }
 
 }

@@ -123,6 +123,65 @@ public class ModRecipeProvider extends RecipeProvider {
                 // .group("azurite")
                 .save(output);
 
+        shaped(RecipeCategory.TOOLS, ModItems.AZURITE_SWORD.get())
+                .pattern("A")
+                .pattern("A")
+                .pattern("S")
+                .define('A', ModItems.AZURITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(output);
+
+        shaped(RecipeCategory.TOOLS, ModItems.AZURITE_PICKAXE.get())
+                .pattern("AAA")
+                .pattern(" S ")
+                .pattern(" S ")
+                .define('A', ModItems.AZURITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.AZURITE_SHOVEL.get())
+                .pattern("A")
+                .pattern("S")
+                .pattern("S")
+                .define('A', ModItems.AZURITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(output);
+
+        shaped(RecipeCategory.TOOLS, ModItems.AZURITE_AXE.get())
+                .pattern("AA")
+                .pattern("AS")
+                .pattern(" S")
+                .define('A', ModItems.AZURITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(output);
+
+        shaped(RecipeCategory.TOOLS, ModItems.AZURITE_HOE.get())
+                .pattern("AA")
+                .pattern(" S")
+                .pattern(" S")
+                .define('A', ModItems.AZURITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(output);
+
+        shaped(RecipeCategory.COMBAT, ModItems.AZURITE_SPEAR.get())
+                .pattern("  A")
+                .pattern(" S ")
+                .pattern("S  ")
+                .define('A', ModItems.AZURITE.get())
+                .define('S', Items.STICK)
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(output);
     }
 
     @Override
