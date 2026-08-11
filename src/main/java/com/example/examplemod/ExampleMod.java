@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 
 import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.creativemodetab.ModCreativeModeTabs;
+import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.item.ModItems;
 import com.mojang.logging.LogUtils;
 
@@ -102,6 +103,8 @@ public class ExampleMod {
         ModItems.register(modEventBus);
 
         ModBlocks.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod)

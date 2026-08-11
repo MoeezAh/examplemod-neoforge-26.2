@@ -2,6 +2,8 @@ package com.example.examplemod.item.custom;
 
 import java.util.function.Consumer;
 
+import com.example.examplemod.data.ModDataComponents;
+import com.example.examplemod.item.ModItems;
 import com.example.examplemod.tags.ModTags;
 
 import net.minecraft.client.Minecraft;
@@ -53,6 +55,8 @@ public class MetalDetectorItem extends Item {
                     // Spawn particles
                     spawnFoundParticles(level, positionClicked, blockState);
 
+                    addDataToDataTablet(player, positionClicked.below(i));
+
                     break;
                 }
             }
@@ -66,6 +70,17 @@ public class MetalDetectorItem extends Item {
         }
 
         return InteractionResult.SUCCESS;
+    }
+
+    private void addDataToDataTablet(Player player, BlockPos position) {
+        int slotIndex = player.getInventory().findSlotMatchingItem(new ItemStack(ModItems.DATA_TABLET.get()));
+
+        if (slotIndex == -1) {
+            return;
+        }
+
+        ItemStack dataTablet = player.getInventory().getItem(slotIndex);
+        dataTablet.set(ModDataComponents.CORDINATES, position);
     }
 
     @Override

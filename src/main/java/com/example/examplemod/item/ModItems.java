@@ -2,6 +2,7 @@ package com.example.examplemod.item;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.food.ModFoods;
+import com.example.examplemod.item.custom.DataTabletItem;
 import com.example.examplemod.item.custom.MetalDetectorItem;
 
 import net.minecraft.network.chat.Component;
@@ -75,6 +76,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> AZURITE_HORSE_ARMOR = ITEMS.registerItem("azurite_horse_armor",
             properties -> new Item(properties.horseArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL)));
+
+    public static final DeferredItem<Item> DATA_TABLET = ITEMS.registerItem("data_tablet",
+            properties -> new DataTabletItem(properties.stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

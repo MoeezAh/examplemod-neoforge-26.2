@@ -1,8 +1,11 @@
 package com.example.examplemod.datagen;
 
+import java.util.Optional;
+
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.blocks.custom.AzuriteLampBlock;
+import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.item.ModArmorMaterials;
 import com.example.examplemod.item.ModItems;
 
@@ -10,11 +13,14 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
-import net.minecraft.client.renderer.block.BlockModelSet;
-import net.minecraft.client.renderer.block.model.BlockModel;
+import net.minecraft.client.renderer.item.ClientItem;
+import net.minecraft.client.renderer.item.ConditionalItemModel;
+import net.minecraft.client.renderer.item.ItemModel;
+import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.data.PackOutput;
 
 public class ModModelProvider extends ModelProvider {
@@ -48,6 +54,15 @@ public class ModModelProvider extends ModelProvider {
                 ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
         itemModels.generateFlatItem(ModItems.AZURITE_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
+
+        ItemModel.Unbaked unbackedDataModel = ItemModelUtils
+                .plainModel(itemModels.createFlatItemModel(ModItems.DATA_TABLET.get(), ModelTemplates.FLAT_ITEM));
+        ItemModel.Unbaked unbackedDataModelOn = ItemModelUtils.plainModel(
+                itemModels.createFlatItemModel(ModItems.DATA_TABLET.get(), "_on", ModelTemplates.FLAT_ITEM));
+        itemModels.itemModelOutput.register(ModItems.DATA_TABLET.get(),
+                new ClientItem(new ConditionalItemModel.Unbaked(Optional.empty(),
+                        new HasComponent(ModDataComponents.CORDINATES.get(), false), unbackedDataModelOn,
+                        unbackedDataModel), new ClientItem.Properties(false, false, 1f)));
 
         /* BLOCKS */
 

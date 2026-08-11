@@ -37,3 +37,4 @@ Changes are listed in chronological order, from oldest to newest.
 ## 2026-08-11
 
 - Added Azurite Lamp, an empty-hand-toggleable light block that emits light level 15 when on, with on/off models, textures, loot data, and Creative Mode availability.
+- Added the Data Tablet, a utility item that stores the last ore coordinates detected by the Metal Detector, displays them in the tooltip, and clears them when used.
