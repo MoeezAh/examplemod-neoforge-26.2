@@ -72,6 +72,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.AZURITE_DOOR);
                         output.accept(ModBlocks.AZURITE_TRAPDOOR);
 
+                        output.accept(ModBlocks.AZURITE_LAMP);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

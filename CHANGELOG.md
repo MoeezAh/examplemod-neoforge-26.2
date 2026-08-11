@@ -1,69 +1,39 @@
 # Changelog
 
-All notable changes to this project are documented in this file.
+Changes are listed in chronological order, from oldest to newest.
 
-## [Unreleased]
+## 2026-08-05
 
-### Added
+- Established the Azurite content foundation: resources, ore variants, storage blocks, recipes, loot tables, models, and advancements.
+- Added the Metal Detector, which scans downward for ores and reports its first find.
+- Added the Magic Block with interaction effects, a Glowing effect for players standing on it, and diamond transmutation for configured items.
 
-- Added the **Metal Detector** item (`examplemod:metal_detector`) with 64 durability.
-- The Metal Detector scans vertically downward from the selected block for ores in the common `c:ores` tag.
-- On finding a valuable ore, the detector reports its block name and coordinates, plays an amethyst chime, and shows block particles.
-- Added a localized message for unsuccessful scans: `No valuables found.`
-- Added the Metal Detector item texture and generated item-definition/model files.
-- Added the **Onion** food item (`examplemod:onion`). It restores 2 hunger points with 0.3 saturation and takes 2.1 seconds to consume.
-- Eating an Onion has a 10% chance to apply Nausea for 400 ticks (20 seconds).
-- Added the Onion texture, localization, item definition, and item model.
-- Added the **End Fire Starter** fuel item (`examplemod:end_fire_starter`), which stacks to 32.
-- Each End Fire Starter burns for 4,800 furnace ticks (4 minutes), enough to smelt 24 standard items.
-- Added the End Fire Starter texture, localization, item definition, and item model.
-- Added the **Azurite Sword**, **Pickaxe**, **Axe**, **Shovel**, **Hoe**, and **Spear**.
-- Added the Azurite tool material: 1,200 durability, mining speed 3, attack bonus 3, enchantability 22, and Azurite repair material.
-- Added crafting recipes for every Azurite tool and the spear, plus generated item definitions, models, recipe advancements, and textures. The spear includes a dedicated in-hand model.
-- Added tool, weapon, repair, and mining-tier tags. The Azurite Pickaxe supports iron-tool blocks and the Magic Block.
-- Added the **Azurite Helmet**, **Chestplate**, **Leggings**, and **Boots**.
-- Added an Azurite armor material with a 1,200 durability multiplier, defense values of 5/9/7/5, 2 armor toughness, 0.1 knockback resistance, enchantability 16, and Azurite repair material.
-- Added armor recipes, localization, wearable textures, equipment asset definitions, armor-slot tags, and trim-compatible item models.
-- Added the **Magic Block** (`examplemod:magic_block`), including its texture, blockstate, item definition, model, and loot table.
-- Added **Azurite Stairs** (`examplemod:azurite_stairs`) and **Azurite Slabs** (`examplemod:azurite_slab`) as pickaxe-mineable building blocks that require the correct tool for drops.
-- Added crafting recipes: 6 Blocks of Azurite make 4 Azurite Stairs, and 3 Blocks of Azurite make 6 Azurite Slabs.
-- Added generated blockstates, models, item definitions, loot tables, recipe advancements, and localized tooltips for Azurite Stairs and Slabs.
-- Added **Azurite Pressure Plate** (`examplemod:azurite_pressure_plate`) and **Azurite Button** (`examplemod:azurite_button`) redstone components.
-- Added recipes: 2 Azurite make a pressure plate, and 1 Azurite makes a button. The button uses iron-button behavior with a 20-tick press duration.
-- Added generated models, blockstates, item definitions, loot tables, recipe advancements, block tags, and localized tooltips for the Azurite Pressure Plate and Button.
-- Added **Azurite Fence** (`examplemod:azurite_fence`), **Azurite Fence Gate** (`examplemod:azurite_fence_gate`), and **Azurite Wall** (`examplemod:azurite_wall`).
-- Added recipes: 4 Azurite and 2 sticks make 3 fences; 2 Azurite and 4 sticks make a fence gate; and 6 Blocks of Azurite make 6 walls.
-- Added generated models, blockstates, item definitions, loot tables, recipe advancements, and standard fence, fence-gate, and wall tags for the Azurite fencing set.
-- Added **Azurite Door** (`examplemod:azurite_door`) and **Azurite Trapdoor** (`examplemod:azurite_trapdoor`) with iron-style, redstone-operated behavior.
-- Added recipes: 6 Azurite make 3 doors, and 6 Azurite make 2 trapdoors.
-- Added generated models, blockstates, item definitions, loot tables, recipe advancements, textures, and standard door/trapdoor tags.
-- Empty-hand use of the Magic Block produces an end-rod particle and an amethyst sound.
-- Players standing on the Magic Block receive the Glowing effect for 300 ticks (15 seconds).
-- Item entities containing iron-ore-tagged items, redstone, copper ingots, or Azurite transform one-for-one into diamonds when they touch the Magic Block.
-- Added an Onion tooltip: `Tasts like Onion.`
-- Added a Magic Block tooltip identifying it as magical.
-- Added Shift-sensitive Metal Detector tooltips: the default prompt asks players to hold Shift, while the expanded tooltip explains how to discover valuables.
+## 2026-08-06
 
-### Changed
+- Added Onion, a food item that restores hunger and has a chance to cause Nausea.
+- Added End Fire Starter, a 4,800-tick furnace fuel.
+- Added tooltips for Onion, Magic Block, and Metal Detector.
+- Added configurable tags for Metal Detector targets and Magic Block transmutation inputs.
 
-- Added the Metal Detector to the **Example Items** Creative Mode tab.
-- Added Onion to the **Example Items** Creative Mode tab.
-- Added End Fire Starter to the **Example Items** Creative Mode tab.
-- Added the Azurite Sword, Pickaxe, Axe, Shovel, and Spear to the **Example Items** Creative Mode tab.
-- Added the full Azurite armor set to the **Example Items** and Minecraft **Combat** Creative Mode tabs.
-- Added Metal Detector model generation to the data-generation provider.
-- Added Onion model generation to the data-generation provider.
-- Added a NeoForge furnace-fuel data-map provider and generated fuel data for the End Fire Starter.
-- Added the Magic Block to the **Example Blocks** Creative Mode tab.
-- Added Azurite Stairs and Slabs to the **Example Blocks** Creative Mode tab.
-- Added the Azurite Pressure Plate and Button to the **Example Blocks** Creative Mode tab.
-- Added the Azurite Fence, Fence Gate, and Wall to the **Example Blocks** Creative Mode tab.
-- Added the Azurite Door and Trapdoor to the **Example Blocks** Creative Mode tab.
-- Added Magic Block model generation, pickaxe mining-tag data, and self-drop loot generation.
-- Added block-family model generation, pickaxe mining tags, and loot handling for Azurite Stairs and Slabs.
-- Added block-family model generation and standard button/pressure-plate tags for the Azurite redstone components.
-- Added block-family model generation and self-drop loot handling for the Azurite fencing set.
-- Added block-family model generation and door/trapdoor loot handling for the Azurite access blocks.
-- Added data-generated item and block tags: `examplemod:transformable_items` configures Magic Block transmutation inputs, and `examplemod:metal_detectables` includes all `c:ores` for the Metal Detector.
-- Updated the project requirement to NeoForge `26.2.0.57`.
-- Updated the Azurite Button and Pressure Plate recipes and unlock criteria to use Azurite instead of Blocks of Azurite.
+## 2026-08-07
+
+- Added Azurite Stairs and Slabs, with crafting recipes, loot behavior, models, tooltips, and Creative Mode availability.
+- Added Azurite Pressure Plate and Button redstone components, including recipes, tags, models, tooltips, and Creative Mode availability.
+
+## 2026-08-08
+
+- Added Azurite Fence, Fence Gate, and Wall with recipes, loot behavior, tags, models, and Creative Mode availability.
+- Added redstone-operated Azurite Door and Trapdoor with recipes, textures, tags, loot behavior, and Creative Mode availability.
+- Changed the Azurite Button and Pressure Plate recipes to use Azurite instead of Blocks of Azurite.
+- Updated the NeoForge requirement to `26.2.0.52-beta`.
+
+## 2026-08-10
+
+- Added the Azurite Sword, Pickaxe, Axe, Shovel, Hoe, and Spear, including recipes, tool tags, repair support, textures, and a dedicated held-spear model.
+- Added the Azurite armor set: Helmet, Chestplate, Leggings, and Boots, with recipes, equipment assets, armor trims, and Creative Mode availability.
+- Added Azurite Horse Armor with a dedicated horse equipment texture and Creative Mode availability.
+- Updated the NeoForge requirement to `26.2.0.57`.
+
+## 2026-08-11
+
+- Added Azurite Lamp, an empty-hand-toggleable light block that emits light level 15 when on, with on/off models, textures, loot data, and Creative Mode availability.

@@ -13,12 +13,13 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 ### Items
 
 - **Raw Azurite** — the unprocessed Azurite resource.
-- **Azurite** — the processed resource currently registered in-game as `examplemod:azurite`.
+- **Azurite** — the processed Azurite resource.
 - **Metal Detector** — a 64-use tool for finding ores below the selected block.
 - **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
 - **End Fire Starter** — a furnace fuel item that stacks to 32.
 - **Azurite Equipment** — a sword, pickaxe, axe, shovel, hoe, and spear crafted from Azurite.
 - **Azurite Armor** — a four-piece armor set crafted from Azurite.
+- **Azurite Horse Armor** — protective horse equipment using the Azurite armor material.
 
 ### End Fire Starter
 
@@ -44,6 +45,10 @@ The Azurite armor set consists of a helmet, chestplate, leggings, and boots. Its
 
 Craft a helmet from 5 Azurite, a chestplate from 8, leggings from 7, and boots from 4.
 
+### Azurite Horse Armor
+
+Azurite Horse Armor uses the Azurite armor material and has a dedicated horse equipment texture.
+
 ### Blocks
 
 - Block of Azurite
@@ -61,6 +66,7 @@ Craft a helmet from 5 Azurite, a chestplate from 8, leggings from 7, and boots f
 - Azurite Wall
 - Azurite Door
 - Azurite Trapdoor
+- Azurite Lamp
 - Magic Block
 
 The ore variants award experience when mined. Azurite blocks, stairs, and slabs require the correct pickaxe for drops and use amethyst-like sounds; ore blocks likewise require the correct tool.
@@ -81,6 +87,10 @@ Azurite Fences, Fence Gates, and Walls extend the Azurite building set. They req
 
 Azurite Doors and Trapdoors use iron-style, redstone-operated behavior. Both require the correct tool for drops, use amethyst-like sounds, and drop themselves when broken. Craft 3 doors from 6 Azurite arranged in two vertical columns, or craft 2 trapdoors from 6 Azurite arranged in two rows.
 
+### Azurite Lamp
+
+The Azurite Lamp is a pickaxe-mineable light block that requires the correct tool for drops. Use it with an empty hand to toggle it on or off. When on, it emits light level 15 and switches to its illuminated texture. It drops itself when broken.
+
 ### Magic Block
 
 The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron-ore-tagged item, redstone, a copper ingot, or Azurite. Its tooltip identifies it as magical.
@@ -97,10 +107,10 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 
 The mod includes two Creative Mode tabs:
 
-- **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, End Fire Starter, Azurite tools and spear, plus the full Azurite armor set.
-- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, and Trapdoors, plus the Magic Block.
+- **Example Items**: Raw Azurite, Azurite, the Metal Detector, Onion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Magic Block.
 
-Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, and armor set are also available in Minecraft's Combat tab.
+Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.
 
 ## Installation
 
@@ -120,7 +130,7 @@ The built JAR will be written to `build/libs`.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete record of unreleased changes, including the Metal Detector, Magic Block, Onion, End Fire Starter, Azurite equipment and armor, and Azurite building, redstone, fencing, and access blocks.
+See [CHANGELOG.md](CHANGELOG.md) for the dated, oldest-first record of project changes.
 
 ## License
 

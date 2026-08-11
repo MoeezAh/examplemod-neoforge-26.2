@@ -3,6 +3,7 @@ package com.example.examplemod.blocks;
 import java.util.function.Function;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.blocks.custom.AzuriteLampBlock;
 import com.example.examplemod.blocks.custom.MagicBlock;
 import com.example.examplemod.item.ModItems;
 
@@ -124,6 +125,11 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AZURITE_TRAPDOOR = registerBlock("azurite_trapdoor",
             properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(2F)
                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST).noOcclusion()));
+
+    public static final DeferredBlock<Block> AZURITE_LAMP = registerBlock("azurite_lamp",
+            properties -> new AzuriteLampBlock(properties.strength(2F)
+                    .requiresCorrectToolForDrops()
+                    .lightLevel(state -> state.getValue(AzuriteLampBlock.CLICKED) ? 15 : 0)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Function<BlockBehaviour.Properties, T> function, Component... components) {

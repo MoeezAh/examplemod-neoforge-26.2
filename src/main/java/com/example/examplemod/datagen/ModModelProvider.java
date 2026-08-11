@@ -2,13 +2,19 @@ package com.example.examplemod.datagen;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.ModBlocks;
+import com.example.examplemod.blocks.custom.AzuriteLampBlock;
 import com.example.examplemod.item.ModArmorMaterials;
 import com.example.examplemod.item.ModItems;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TextureMapping;
+import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.renderer.block.BlockModelSet;
+import net.minecraft.client.renderer.block.model.BlockModel;
 import net.minecraft.data.PackOutput;
 
 public class ModModelProvider extends ModelProvider {
@@ -63,5 +69,12 @@ public class ModModelProvider extends ModelProvider {
                 .wall(ModBlocks.AZURITE_WALL.get())
                 .door(ModBlocks.AZURITE_DOOR.get())
                 .trapdoor(ModBlocks.AZURITE_TRAPDOOR.get());
+
+        blockModels.blockStateOutput.accept(MultiVariantGenerator.dispatch(ModBlocks.AZURITE_LAMP.get())
+                .with(BlockModelGenerators.createBooleanModelDispatch(AzuriteLampBlock.CLICKED,
+                        BlockModelGenerators.plainVariant(blockModels.createSuffixedVariant(
+                                ModBlocks.AZURITE_LAMP.get(), "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube)),
+                        BlockModelGenerators.plainVariant(
+                                TexturedModel.CUBE.create(ModBlocks.AZURITE_LAMP.get(), blockModels.modelOutput)))));
     }
 }

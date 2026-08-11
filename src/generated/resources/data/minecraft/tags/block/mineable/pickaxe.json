@@ -8,6 +8,7 @@
     "examplemod:azurite_end_ore",
     "examplemod:magic_block",
     "examplemod:azurite_stairs",
-    "examplemod:azurite_slab"
+    "examplemod:azurite_slab",
+    "examplemod:azurite_lamp"
   ]
 }
