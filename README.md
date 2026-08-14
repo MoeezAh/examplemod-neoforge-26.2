@@ -32,11 +32,11 @@ Eating an Onion takes 2.1 seconds. Each serving has a 10% chance to apply **Naus
 
 ### Metal Detector
 
-Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first ore in the common `c:ores` tag. When it finds one, the detector reports the block name and coordinates, plays an amethyst chime, and shows block particles. If nothing is found, it displays **"No valuables found."** Each use consumes one durability point. Hovering it prompts you to hold Shift; holding Shift displays usage guidance.
+Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first ore in the common `c:ores` tag. When it finds one, the detector reports the block name and coordinates, plays an amethyst chime, shows block particles, and records the result on a Data Tablet if one is in the player's inventory. If nothing is found, it displays **"No valuables found."** Each use consumes one durability point. Hovering it prompts you to hold Shift; holding Shift displays usage guidance.
 
 ### Data Tablet
 
-The Data Tablet is a utility item that stores the coordinates of the last valuable block found by the Metal Detector. When a matching ore is detected, the detector automatically writes its position into the tablet if one is in the player's inventory. The tablet glows while it contains a saved location and displays the saved coordinates in its tooltip. Using the tablet clears the stored coordinates and resets it to its normal state.
+The Data Tablet is a utility item that stores the most recent valuable block found by the Metal Detector, including both the block's registry name and its exact coordinates. When a matching ore is detected, the detector writes the position and block identity into the tablet if one is in the player's inventory. The tablet glows while it contains saved data and its tooltip shows the block name alongside the coordinates. Using the tablet clears both saved values and returns it to its empty state.
 
 ### Azurite Tools and Spear
 

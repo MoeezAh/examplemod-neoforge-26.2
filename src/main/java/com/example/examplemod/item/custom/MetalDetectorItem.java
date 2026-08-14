@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -55,7 +56,7 @@ public class MetalDetectorItem extends Item {
                     // Spawn particles
                     spawnFoundParticles(level, positionClicked, blockState);
 
-                    addDataToDataTablet(player, positionClicked.below(i));
+                    addDataToDataTablet(player, positionClicked.below(i), blockState.getBlock());
 
                     break;
                 }
@@ -72,7 +73,7 @@ public class MetalDetectorItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
-    private void addDataToDataTablet(Player player, BlockPos position) {
+    private void addDataToDataTablet(Player player, BlockPos position, Block block) {
         int slotIndex = player.getInventory().findSlotMatchingItem(new ItemStack(ModItems.DATA_TABLET.get()));
 
         if (slotIndex == -1) {
@@ -81,6 +82,7 @@ public class MetalDetectorItem extends Item {
 
         ItemStack dataTablet = player.getInventory().getItem(slotIndex);
         dataTablet.set(ModDataComponents.CORDINATES, position);
+        dataTablet.set(ModDataComponents.TRESURE_BLOCK_NAME, BuiltInRegistries.BLOCK.getKey(block).toString());
     }
 
     @Override
