@@ -38,3 +38,7 @@ Changes are listed in chronological order, from oldest to newest.
 
 - Added Azurite Lamp, an empty-hand-toggleable light block that emits light level 15 when on, with on/off models, textures, loot data, and Creative Mode availability.
 - Added the Data Tablet, a utility item that stores the last ore coordinates detected by the Metal Detector, displays them in the tooltip, and clears them when used.
+
+## 2026-08-14
+
+- Added the Curved Bow, a ranged weapon with 500 durability that supports bow-specific enchantments, including bow pull-state animations and textures, and Creative Mode availability.

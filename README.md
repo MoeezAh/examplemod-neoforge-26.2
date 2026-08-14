@@ -16,6 +16,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Azurite** — the processed Azurite resource.
 - **Metal Detector** — a 64-use tool for finding ores below the selected block.
 - **Data Tablet** — a utility item that stores the last ore coordinates found by the Metal Detector.
+- **Curved Bow** — a ranged weapon with 500 durability, enchantable with bow-specific enchantments.
 - **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
 - **End Fire Starter** — a furnace fuel item that stacks to 32.
 - **Azurite Equipment** — a sword, pickaxe, axe, shovel, hoe, and spear crafted from Azurite.
@@ -37,6 +38,10 @@ Use the Metal Detector on a block to scan vertically downward, starting at the s
 ### Data Tablet
 
 The Data Tablet is a utility item that stores the coordinates of the last valuable block found by the Metal Detector. When a matching ore is detected, the detector automatically writes its position into the tablet if one is in the player's inventory. The tablet glows while it contains a saved location and displays the saved coordinates in its tooltip. Using the tablet clears the stored coordinates and resets it to its normal state.
+
+### Curved Bow
+
+The Curved Bow is a ranged weapon with 500 durability points. It fires arrows and can be enchanted with bow-specific enchantments such as Power, Draw Speed, Punch, Flame, and Infinity. Its drawing animation features multiple pull stages for visual feedback.
 
 ### Azurite Tools and Spear
 
@@ -112,7 +117,7 @@ The Magic Block is a pickaxe-mineable block that drops itself when broken. Use i
 
 The mod includes two Creative Mode tabs:
 
-- **Example Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, Onion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Example Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, Onion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
 - **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.

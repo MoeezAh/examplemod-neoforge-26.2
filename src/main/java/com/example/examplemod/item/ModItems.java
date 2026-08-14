@@ -7,6 +7,7 @@ import com.example.examplemod.item.custom.MetalDetectorItem;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ShovelItem;
@@ -79,6 +80,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> DATA_TABLET = ITEMS.registerItem("data_tablet",
             properties -> new DataTabletItem(properties.stacksTo(1)));
+
+    public static final DeferredItem<Item> EXAMPLE_BOW = ITEMS.registerItem("example_bow",
+            properties -> new BowItem(properties.durability(500)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

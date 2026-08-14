@@ -44,7 +44,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AZURITE_BOOTS);
 
                         output.accept(ModItems.AZURITE_HORSE_ARMOR);
+
                         output.accept(ModItems.DATA_TABLET);
+                        output.accept(ModItems.EXAMPLE_BOW);
 
                     }).build());
 

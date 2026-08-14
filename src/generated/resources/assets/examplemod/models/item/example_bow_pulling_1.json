@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "examplemod:item/example_bow_pulling_1"
+  }
+}
