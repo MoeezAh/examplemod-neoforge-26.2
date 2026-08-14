@@ -23,6 +23,7 @@
   "block.examplemod.azurite_door": "Azurite Door",
   "block.examplemod.azurite_trapdoor": "Azurite Trapdoor",
   "block.examplemod.azurite_lamp": "Azurite Lamp",
+  "block.examplemod.pedestal": "Pedestal",
 
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",

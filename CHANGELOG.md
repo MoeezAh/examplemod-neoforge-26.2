@@ -45,4 +45,5 @@ Changes are listed in chronological order, from oldest to newest.
 - Added FOV zoom mechanic for the Curved Bow: drawing the bow gradually reduces field of view for improved aiming feedback.
 - Added End Rod + Sheep interaction: hitting a Sheep with an End Rod applies Poison II for 30 seconds and consumes the End Rod.
 - Added the Blizzard Staff, a staff item with a unique 3D model and single-item stack limit, with Creative Mode availability.
+- Added the Pedestal, a decorative block with a narrow column design, pickaxe-mineable with correct tool requirement, and Creative Mode availability.
 - Updated mod version to `1.0.0-26.2`.

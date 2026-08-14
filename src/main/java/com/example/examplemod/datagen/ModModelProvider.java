@@ -95,5 +95,7 @@ public class ModModelProvider extends ModelProvider {
                                 ModBlocks.AZURITE_LAMP.get(), "_on", ModelTemplates.CUBE_ALL, TextureMapping::cube)),
                         BlockModelGenerators.plainVariant(
                                 TexturedModel.CUBE.create(ModBlocks.AZURITE_LAMP.get(), blockModels.modelOutput)))));
+
+        blockModels.createNonTemplateModelBlock(ModBlocks.PEDESTAL_BLOCK.get());
     }
 }

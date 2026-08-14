@@ -5,6 +5,7 @@ import java.util.function.Function;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.custom.AzuriteLampBlock;
 import com.example.examplemod.blocks.custom.MagicBlock;
+import com.example.examplemod.blocks.custom.PedestalBlock;
 import com.example.examplemod.item.ModItems;
 
 import net.minecraft.network.chat.Component;
@@ -130,6 +131,10 @@ public class ModBlocks {
             properties -> new AzuriteLampBlock(properties.strength(2F)
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(AzuriteLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> PEDESTAL_BLOCK = registerBlock("pedestal",
+            properties -> new PedestalBlock(properties.strength(2F)
+                    .requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Function<BlockBehaviour.Properties, T> function, Component... components) {

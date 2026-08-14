@@ -9,6 +9,7 @@
     "examplemod:magic_block",
     "examplemod:azurite_stairs",
     "examplemod:azurite_slab",
-    "examplemod:azurite_lamp"
+    "examplemod:azurite_lamp",
+    "examplemod:pedestal"
   ]
 }
