@@ -84,6 +84,9 @@ public class ModItems {
     public static final DeferredItem<Item> EXAMPLE_BOW = ITEMS.registerItem("example_bow",
             properties -> new BowItem(properties.durability(500)));
 
+    public static final DeferredItem<Item> BLIZZARD_STAFF = ITEMS.registerItem("blizzard_staff",
+            properties -> new Item(properties.stacksTo(1)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

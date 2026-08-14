@@ -66,6 +66,7 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.createFlatItemModel(ModItems.EXAMPLE_BOW.get(), ModelTemplates.BOW);
         itemModels.generateBow(ModItems.EXAMPLE_BOW.get());
+        itemModels.declareCustomModelItem(ModItems.BLIZZARD_STAFF.get());
 
         /* BLOCKS */
 

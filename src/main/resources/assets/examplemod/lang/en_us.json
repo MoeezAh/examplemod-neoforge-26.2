@@ -42,7 +42,8 @@
   
   "item.examplemod.azurite_horse_armor": "Azurite Horse Armor",
   "item.examplemod.data_tablet": "Data Tablet",
-  "item.examplemod.exmaple_mod": "Curved Bow",
+  "item.examplemod.exmaple_bow": "Curved Bow",
+  "item.examplemod.blizzard_staff": "Blizzard Staff",
 
 
   "tooltip.examplemod.onion.tooltip": "§7Tasts like Onion.§r",
