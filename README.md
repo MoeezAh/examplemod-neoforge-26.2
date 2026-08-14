@@ -7,6 +7,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - Minecraft `26.2`
 - NeoForge `26.2.0.57` or newer
 - Mod ID: `examplemod`
+- Version: `1.0.0-26.2`
 
 ## Content
 
@@ -27,6 +28,10 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 
 Each End Fire Starter burns for 4,800 furnace ticks (4 minutes), enough to smelt 24 standard items.
 
+### End Rod Sheep Interaction
+
+Hitting a Sheep with an End Rod will apply the **Poison II** effect for 30 seconds (600 ticks). The attacking player receives a system message indicating the action. The End Rod is consumed with each use.
+
 ### Onion
 
 Eating an Onion takes 2.1 seconds. Each serving has a 10% chance to apply **Nausea** for 20 seconds. Its tooltip reads, “Tasts like Onion.”
@@ -41,7 +46,7 @@ The Data Tablet is a utility item that stores the coordinates of the last valuab
 
 ### Curved Bow
 
-The Curved Bow is a ranged weapon with 500 durability points. It fires arrows and can be enchanted with bow-specific enchantments such as Power, Draw Speed, Punch, Flame, and Infinity. Its drawing animation features multiple pull stages for visual feedback.
+The Curved Bow is a ranged weapon with 500 durability points. It fires arrows and can be enchanted with bow-specific enchantments such as Power, Draw Speed, Punch, Flame, and Infinity. Its drawing animation features multiple pull stages for visual feedback. When held and drawn, it reduces the player's field of view (FOV) for a zooming effect, providing better accuracy feedback as the draw reaches completion.
 
 ### Azurite Tools and Spear
 

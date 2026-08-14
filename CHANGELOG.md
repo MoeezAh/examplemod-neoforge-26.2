@@ -42,3 +42,6 @@ Changes are listed in chronological order, from oldest to newest.
 ## 2026-08-14
 
 - Added the Curved Bow, a ranged weapon with 500 durability that supports bow-specific enchantments, including bow pull-state animations and textures, and Creative Mode availability.
+- Added FOV zoom mechanic for the Curved Bow: drawing the bow gradually reduces field of view for improved aiming feedback.
+- Added End Rod + Sheep interaction: hitting a Sheep with an End Rod applies Poison II for 30 seconds and consumes the End Rod.
+- Updated mod version to `1.0.0-26.2`.
