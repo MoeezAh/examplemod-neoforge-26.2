@@ -47,6 +47,14 @@
   "item.examplemod.blizzard_staff": "Blizzard Staff",
 
 
+  "painting.examplemod.shrimp.title": "Shrimp",
+  "painting.examplemod.shrimp.author": "NanoAttack",
+  "painting.examplemod.saw_them.title": "Saw Them",
+  "painting.examplemod.saw_them.author": "NanoAttack",
+  "painting.examplemod.world.title": "World",
+  "painting.examplemod.world.author": "NanoAttack",
+
+
   "tooltip.examplemod.onion.tooltip": "§7Tasts like Onion.§r",
   "tooltip.examplemod.magic_block.tooltip": "§7Its quite §9MAGICAL§r.",
   "tooltip.examplemod.metal_detector.shift_down": "§7Discover valuables by clicking on blocks.§r",

@@ -1,0 +1,13 @@
+{
+  "asset_id": "examplemod:world",
+  "author": {
+    "color": "gray",
+    "translate": "painting.examplemod.world.author"
+  },
+  "height": 2,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.examplemod.world.title"
+  },
+  "width": 2
+}

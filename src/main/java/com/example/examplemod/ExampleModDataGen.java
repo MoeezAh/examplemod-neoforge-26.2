@@ -7,9 +7,11 @@ import java.util.concurrent.CompletableFuture;
 import com.example.examplemod.datagen.ModBlockLootTableProvider;
 import com.example.examplemod.datagen.ModBlockTagsProvider;
 import com.example.examplemod.datagen.ModDataMapProvider;
+import com.example.examplemod.datagen.ModDataPackProvider;
 import com.example.examplemod.datagen.ModEquipmentAssetProvider;
 import com.example.examplemod.datagen.ModItemTagsProvider;
 import com.example.examplemod.datagen.ModModelProvider;
+import com.example.examplemod.datagen.ModPaintingTagsProvider;
 import com.example.examplemod.datagen.ModRecipeProvider;
 
 import net.minecraft.core.HolderLookup.Provider;
@@ -40,5 +42,7 @@ public class ExampleModDataGen {
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModItemTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new ModEquipmentAssetProvider(packOutput));
+        generator.addProvider(true, new ModDataPackProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new ModPaintingTagsProvider(packOutput, lookupProvider));
     }
 }

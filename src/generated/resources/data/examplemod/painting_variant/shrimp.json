@@ -1,0 +1,13 @@
+{
+  "asset_id": "examplemod:shrimp",
+  "author": {
+    "color": "gray",
+    "translate": "painting.examplemod.shrimp.author"
+  },
+  "height": 1,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.examplemod.shrimp.title"
+  },
+  "width": 2
+}

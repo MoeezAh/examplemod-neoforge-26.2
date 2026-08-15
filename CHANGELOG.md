@@ -47,3 +47,8 @@ Changes are listed in chronological order, from oldest to newest.
 - Added the Blizzard Staff, a staff item with a unique 3D model and single-item stack limit, with Creative Mode availability.
 - Added the Pedestal, a decorative block with a narrow column design, pickaxe-mineable with correct tool requirement, and Creative Mode availability.
 - Updated mod version to `1.0.0-26.2`.
+
+## 2026-08-15
+
+- Added three custom paintings by NanoAttack: Shrimp (2×1), Saw Them (2×2), and World (2×2).
+

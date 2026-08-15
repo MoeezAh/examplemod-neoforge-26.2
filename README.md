@@ -120,6 +120,14 @@ The Pedestal is a decorative block with a narrow column design. It requires a pi
 
 The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron-ore-tagged item, redstone, a copper ingot, or Azurite. Its tooltip identifies it as magical.
 
+## Paintings
+
+The mod includes three custom paintings by NanoAttack:
+
+- **Shrimp** — a 2×1 painting featuring a shrimp design.
+- **Saw Them** — a 2×2 painting with a notable scene.
+- **World** — a 2×2 painting depicting a world scene.
+
 ## Obtaining Azurite
 
 - Smelt or blast Raw Azurite or any Azurite ore variant to obtain Azurite.
