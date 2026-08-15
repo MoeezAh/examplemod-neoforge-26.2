@@ -6,6 +6,7 @@ import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.creativemodetab.ModCreativeModeTabs;
 import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.item.ModItems;
+import com.example.examplemod.stat.ModStats;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -105,6 +106,8 @@ public class ExampleMod {
         ModBlocks.register(modEventBus);
 
         ModDataComponents.register(modEventBus);
+
+        ModStats.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod)

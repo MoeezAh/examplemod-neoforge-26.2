@@ -4,6 +4,7 @@ import java.util.function.Consumer;
 
 import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.item.ModItems;
+import com.example.examplemod.stat.ModStats;
 import com.example.examplemod.tags.ModTags;
 
 import net.minecraft.client.Minecraft;
@@ -56,6 +57,8 @@ public class MetalDetectorItem extends Item {
                     spawnFoundParticles(level, positionClicked, blockState);
 
                     addDataToDataTablet(player, positionClicked.below(i));
+
+                    player.awardStat(ModStats.VLAUABLES_FOUND.get(), 1);
 
                     break;
                 }

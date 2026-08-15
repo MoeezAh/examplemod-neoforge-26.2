@@ -53,6 +53,9 @@
   "painting.examplemod.saw_them.author": "NanoAttack",
   "painting.examplemod.world.title": "World",
   "painting.examplemod.world.author": "NanoAttack",
+  
+  
+  "stat.examplemod.valuables_found": "Valuables Found",
 
 
   "tooltip.examplemod.onion.tooltip": "§7Tasts like Onion.§r",

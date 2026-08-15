@@ -51,4 +51,5 @@ Changes are listed in chronological order, from oldest to newest.
 ## 2026-08-15
 
 - Added three custom paintings by NanoAttack: Shrimp (2×1), Saw Them (2×2), and World (2×2).
+- Added custom stat tracking: Metal Detector now increments the **Valuables Found** statistic when a valuable block is discovered.
 
