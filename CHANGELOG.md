@@ -53,3 +53,8 @@ Changes are listed in chronological order, from oldest to newest.
 - Added three custom paintings by NanoAttack: Shrimp (2×1), Saw Them (2×2), and World (2×2).
 - Added custom stat tracking: Metal Detector now increments the **Valuables Found** statistic when a valuable block is discovered.
 
+## 2026-08-19
+
+- Updated the NeoForge requirement to `26.2.0.64`.
+- Added an Azurite block icon and banner image for the mod's NeoForge UI metadata.
+
