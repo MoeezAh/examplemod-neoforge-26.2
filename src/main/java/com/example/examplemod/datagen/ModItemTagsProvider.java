@@ -23,7 +23,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
     protected void addTags(Provider registries) {
 
         tag(ModTags.Items.TRANSFORMABLE_ITEMS)
-                .addTag(ItemTags.IRON_ORES)
+                .add(ItemIds.IRON_INGOT)
                 .add(BlockItemIds.REDSTONE_DUST.item())
                 .add(ItemIds.COPPER_INGOT)
                 .add(ModItems.AZURITE.getKey());
@@ -31,30 +31,19 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ModTags.Items.AZURITE_REPAIRABLE)
                 .add(ModItems.AZURITE.getKey());
 
-        tag(ItemTags.SWORDS)
-                .add(ModItems.AZURITE_SWORD.getKey());
-
-        tag(ItemTags.PICKAXES)
-                .add(ModItems.AZURITE_PICKAXE.getKey());
-
-        tag(ItemTags.AXES)
-                .add(ModItems.AZURITE_AXE.getKey());
-
-        tag(ItemTags.SHOVELS)
-                .add(ModItems.AZURITE_SHOVEL.getKey());
-
-        tag(ItemTags.HOES)
-                .add(ModItems.AZURITE_HOE.getKey());
-
-        tag(ItemTags.SPEARS)
-                .add(ModItems.AZURITE_SPEAR.getKey());
+        tag(ItemTags.SWORDS).add(ModItems.AZURITE_SWORD.getKey());
+        tag(ItemTags.PICKAXES).add(ModItems.AZURITE_PICKAXE.getKey());
+        tag(ItemTags.AXES).add(ModItems.AZURITE_AXE.getKey());
+        tag(ItemTags.SHOVELS).add(ModItems.AZURITE_SHOVEL.getKey());
+        tag(ItemTags.HOES).add(ModItems.AZURITE_HOE.getKey());
+        tag(ItemTags.SPEARS).add(ModItems.AZURITE_SPEAR.getKey());
 
         tag(ItemTags.HEAD_ARMOR).add(ModItems.AZURITE_HELMET.getKey());
         tag(ItemTags.CHEST_ARMOR).add(ModItems.AZURITE_CHESTPLATE.getKey());
         tag(ItemTags.LEG_ARMOR).add(ModItems.AZURITE_LEGGINGS.getKey());
         tag(ItemTags.FOOT_ARMOR).add(ModItems.AZURITE_BOOTS.getKey());
 
-        tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.EXAMPLE_BOW.getKey());
+        tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.CURVED_BOW.getKey());
     }
 
 }

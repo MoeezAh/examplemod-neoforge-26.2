@@ -81,7 +81,7 @@ public class ModItems {
     public static final DeferredItem<Item> DATA_TABLET = ITEMS.registerItem("data_tablet",
             properties -> new DataTabletItem(properties.stacksTo(1)));
 
-    public static final DeferredItem<Item> EXAMPLE_BOW = ITEMS.registerItem("example_bow",
+    public static final DeferredItem<Item> CURVED_BOW = ITEMS.registerItem("curved_bow",
             properties -> new BowItem(properties.durability(500)));
 
     public static final DeferredItem<Item> BLIZZARD_STAFF = ITEMS.registerItem("blizzard_staff",

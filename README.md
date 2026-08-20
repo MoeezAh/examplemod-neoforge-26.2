@@ -118,7 +118,7 @@ The Pedestal is a decorative block with a narrow column design. It requires a pi
 
 ### Magic Block
 
-The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron-ore-tagged item, redstone, a copper ingot, or Azurite. Its tooltip identifies it as magical.
+The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron ingot, redstone, a copper ingot, or Azurite. Its tooltip identifies it as magical.
 
 ## Paintings
 
@@ -140,8 +140,8 @@ The mod includes three custom paintings by NanoAttack:
 
 The mod includes two Creative Mode tabs:
 
-- **Example Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
-- **Example Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal and Magic Block.
+- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Azurite Building Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal and Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.
 

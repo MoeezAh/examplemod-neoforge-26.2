@@ -58,3 +58,11 @@ Changes are listed in chronological order, from oldest to newest.
 - Updated the NeoForge requirement to `26.2.0.64`.
 - Added an Azurite block icon and banner image for the mod's NeoForge UI metadata.
 
+## 2026-08-20
+
+- Renamed the Curved Bow item registry ID from `example_bow` to `curved_bow` for consistency.
+- Fixed the language key from `exmaple_bow` (typo) to `curved_bow` in en_us.json.
+- Updated the Magic Block's transformable items to use `minecraft:iron_ingot` instead of the iron ores tag, making only iron ingots transformable to diamonds.
+- Renamed creative mode tabs: "Example Items" → "Azurite Items" and "Example Blocks" → "Azurite Building Blocks" for better mod branding.
+- Updated the NeoForge moddev plugin from version 2.0.143 to 2.0.144.
+- Code cleanup: removed unused imports and reformatted item tag provider entries for better readability.

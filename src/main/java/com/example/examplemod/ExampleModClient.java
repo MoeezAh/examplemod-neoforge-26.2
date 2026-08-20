@@ -37,7 +37,7 @@ public class ExampleModClient {
 
     @SubscribeEvent
     public static void onComputerFovModifierEevnt(ComputeFovModifierEvent event) {
-        if (event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().is(ModItems.EXAMPLE_BOW)) {
+        if (event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().is(ModItems.CURVED_BOW)) {
             float fovModifier = 1.0f;
             int tickAsUsingItem = event.getPlayer().getTicksUsingItem();
             float deltaTicks = (float) tickAsUsingItem / 20f;

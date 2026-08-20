@@ -4,8 +4,8 @@
   "item.examplemod.example_item": "Example Item",
   "item.examplemod.azurite": "Azurite",
   "item.examplemod.raw_azurite": "Raw Azurite",
-  "creativetab.examplemod.exampleitems": "Example Items",
-  "creativetab.examplemod.exampleblocks": "Example Blocks",
+  "creativetab.examplemod.exampleitems": "Azurite Items",
+  "creativetab.examplemod.exampleblocks": "Azurite Building Blocks",
   "block.examplemod.azurite_block": "Block of Azurite",
   "block.examplemod.raw_azurite_block": "Block of Raw Azurite",
   "block.examplemod.azurite_ore": "Azurite Ore",
@@ -43,7 +43,7 @@
   
   "item.examplemod.azurite_horse_armor": "Azurite Horse Armor",
   "item.examplemod.data_tablet": "Data Tablet",
-  "item.examplemod.exmaple_bow": "Curved Bow",
+  "item.examplemod.curved_bow": "Curved Bow",
   "item.examplemod.blizzard_staff": "Blizzard Staff",
 
 
