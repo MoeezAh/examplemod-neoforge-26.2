@@ -79,6 +79,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_AZURITE_TOOL)
                 .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
                 .remove(ModTags.Blocks.NEEDS_AZURITE_TOOL);
+
+        tag(BlockTags.CROPS).add(ModBlocks.ONION_CROP.getKey());
+        tag(BlockTags.MAINTAINS_FARMLAND).add(ModBlocks.ONION_CROP.getKey());
     }
 
 }

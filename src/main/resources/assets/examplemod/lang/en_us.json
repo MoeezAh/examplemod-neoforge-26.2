@@ -24,6 +24,7 @@
   "block.examplemod.azurite_trapdoor": "Azurite Trapdoor",
   "block.examplemod.azurite_lamp": "Azurite Lamp",
   "block.examplemod.pedestal": "Pedestal",
+  "block.examplemod.onion_crop": "Onion Crop",
 
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",
@@ -45,6 +46,7 @@
   "item.examplemod.data_tablet": "Data Tablet",
   "item.examplemod.curved_bow": "Curved Bow",
   "item.examplemod.blizzard_staff": "Blizzard Staff",
+  "item.examplemod.onion_seeds": "Onion Seeds",
 
 
   "painting.examplemod.shrimp.title": "Shrimp",

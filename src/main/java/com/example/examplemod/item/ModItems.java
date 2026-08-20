@@ -1,12 +1,14 @@
 package com.example.examplemod.item;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.food.ModFoods;
 import com.example.examplemod.item.custom.DataTabletItem;
 import com.example.examplemod.item.custom.MetalDetectorItem;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -86,6 +88,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> BLIZZARD_STAFF = ITEMS.registerItem("blizzard_staff",
             properties -> new Item(properties.stacksTo(1)));
+
+    public static final DeferredItem<Item> ONION_SEED = ITEMS.registerItem("onion_seeds",
+            properties -> new BlockItem(ModBlocks.ONION_CROP.get(), properties));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

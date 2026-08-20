@@ -66,3 +66,6 @@ Changes are listed in chronological order, from oldest to newest.
 - Renamed creative mode tabs: "Example Items" → "Azurite Items" and "Example Blocks" → "Azurite Building Blocks" for better mod branding.
 - Updated the NeoForge moddev plugin from version 2.0.143 to 2.0.144.
 - Code cleanup: removed unused imports and reformatted item tag provider entries for better readability.
+- Added Onion Seeds and a four-stage Onion Crop with generated models, textures, loot, and crop tags.
+- Fully grown Onion Crops drop Onions and Onion Seeds; immature crops drop seeds.
+- Added Onion Seeds to the Azurite Items Creative Mode tab.

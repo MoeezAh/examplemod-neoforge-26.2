@@ -20,6 +20,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Curved Bow** — a ranged weapon with 500 durability, enchantable with bow-specific enchantments.
 - **Blizzard Staff** — a staff item with a single-item stack limit.
 - **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
+- **Onion Seeds** — plantable seeds used to grow Onion Crops.
 - **End Fire Starter** — a furnace fuel item that stacks to 32.
 - **Azurite Equipment** — a sword, pickaxe, axe, shovel, hoe, and spear crafted from Azurite.
 - **Azurite Armor** — a four-piece armor set crafted from Azurite.
@@ -36,6 +37,8 @@ Hitting a Sheep with an End Rod will apply the **Poison II** effect for 30 secon
 ### Onion
 
 Eating an Onion takes 2.1 seconds. Each serving has a 10% chance to apply **Nausea** for 20 seconds. Its tooltip reads, “Tasts like Onion.”
+
+Onion Seeds grow through four stages when planted on farmland. A fully grown Onion Crop drops Onions and Onion Seeds, while immature crops drop seeds.
 
 ### Metal Detector
 
@@ -89,6 +92,7 @@ Azurite Horse Armor uses the Azurite armor material and has a dedicated horse eq
 - Azurite Lamp
 - Pedestal
 - Magic Block
+- Onion Crop
 
 The ore variants award experience when mined. Azurite blocks, stairs, and slabs require the correct pickaxe for drops and use amethyst-like sounds; ore blocks likewise require the correct tool.
 
@@ -140,7 +144,7 @@ The mod includes three custom paintings by NanoAttack:
 
 The mod includes two Creative Mode tabs:
 
-- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
 - **Azurite Building Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal and Magic Block.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.

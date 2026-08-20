@@ -3,8 +3,10 @@ package com.example.examplemod.datagen;
 import java.util.Set;
 
 import com.example.examplemod.blocks.ModBlocks;
+import com.example.examplemod.blocks.custom.OnionCropBlock;
 import com.example.examplemod.item.ModItems;
 
+import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -20,6 +22,7 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
@@ -59,6 +62,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.AZURITE_LAMP.get());
         dropSelf(ModBlocks.PEDESTAL_BLOCK.get());
+
+        add(ModBlocks.ONION_CROP.get(), createCropDrops(ModBlocks.ONION_CROP.get(), ModItems.ONION.get(),
+                ModItems.ONION_SEED.get(),
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.ONION_CROP.get()).setProperties(
+                        StatePropertiesPredicate.Builder.properties().hasProperty(OnionCropBlock.AGE, 3))));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops,

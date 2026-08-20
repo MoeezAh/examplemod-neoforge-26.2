@@ -5,6 +5,7 @@ import java.util.Optional;
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.blocks.custom.AzuriteLampBlock;
+import com.example.examplemod.blocks.custom.OnionCropBlock;
 import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.item.ModArmorMaterials;
 import com.example.examplemod.item.ModItems;
@@ -97,5 +98,7 @@ public class ModModelProvider extends ModelProvider {
                                 TexturedModel.CUBE.create(ModBlocks.AZURITE_LAMP.get(), blockModels.modelOutput)))));
 
         blockModels.createNonTemplateModelBlock(ModBlocks.PEDESTAL_BLOCK.get());
+
+        blockModels.createCropBlock(ModBlocks.ONION_CROP.get(), OnionCropBlock.AGE, 0, 1, 2, 3);
     }
 }

@@ -49,6 +49,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CURVED_BOW);
                         output.accept(ModItems.BLIZZARD_STAFF);
 
+                        output.accept(ModItems.ONION_SEED);
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register(
