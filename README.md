@@ -38,7 +38,7 @@ Hitting a Sheep with an End Rod will apply the **Poison II** effect for 30 secon
 
 Eating an Onion takes 2.1 seconds. Each serving has a 10% chance to apply **Nausea** for 20 seconds. Its tooltip reads, “Tasts like Onion.”
 
-Onion Seeds grow through four stages when planted on farmland. A fully grown Onion Crop drops Onions and Onion Seeds, while immature crops drop seeds.
+Onion Seeds grow through four stages when planted on farmland. A fully grown Onion Crop drops Onions and Onion Seeds, while immature crops drop seeds. Onion Seeds can be composted with a 30% chance of increasing the composter level, and Onions have a 50% chance.
 
 ### Metal Detector
 

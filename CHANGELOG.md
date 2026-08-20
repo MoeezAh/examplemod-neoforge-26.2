@@ -69,3 +69,4 @@ Changes are listed in chronological order, from oldest to newest.
 - Added Onion Seeds and a four-stage Onion Crop with generated models, textures, loot, and crop tags.
 - Fully grown Onion Crops drop Onions and Onion Seeds; immature crops drop seeds.
 - Added Onion Seeds to the Azurite Items Creative Mode tab.
+- Added composting support for Onion Seeds (30% chance) and Onions (50% chance).
