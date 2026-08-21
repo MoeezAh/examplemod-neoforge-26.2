@@ -50,6 +50,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BLIZZARD_STAFF);
 
                         output.accept(ModItems.ONION_SEED);
+                        output.accept(ModItems.GOJI_BERRY);
 
                     }).build());
 

@@ -4,6 +4,7 @@ import java.util.function.Function;
 
 import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.custom.AzuriteLampBlock;
+import com.example.examplemod.blocks.custom.GojiBerryBushBlock;
 import com.example.examplemod.blocks.custom.MagicBlock;
 import com.example.examplemod.blocks.custom.OnionCropBlock;
 import com.example.examplemod.blocks.custom.PedestalBlock;
@@ -138,6 +139,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ONION_CROP = BLOCKS.registerBlock("onion_crop",
             properties -> new OnionCropBlock(properties.randomTicks().sound(SoundType.CROP).instabreak().noCollision()
                     .pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> GOJI_BERRY_BUSH = BLOCKS.registerBlock("goji_berry_bush",
+            properties -> new GojiBerryBushBlock(properties.randomTicks().sound(SoundType.SWEET_BERRY_BUSH)
+                    .noCollision().pushReaction(PushReaction.DESTROY)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,
             Function<BlockBehaviour.Properties, T> function, Component... components) {

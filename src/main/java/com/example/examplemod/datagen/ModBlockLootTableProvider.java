@@ -7,6 +7,7 @@ import com.example.examplemod.blocks.custom.OnionCropBlock;
 import com.example.examplemod.item.ModItems;
 
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
+import net.minecraft.advancements.predicates.StatePropertiesPredicate.Builder;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -17,6 +18,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
+import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
@@ -32,6 +35,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        HolderLookup.RegistryLookup<Enchantment> enchantments = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
+
         dropSelf(ModBlocks.AZURITE_BLOCK.get());
         dropSelf(ModBlocks.RAW_AZURITE_BLOCK.get());
 
@@ -67,6 +72,23 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 ModItems.ONION_SEED.get(),
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.ONION_CROP.get()).setProperties(
                         StatePropertiesPredicate.Builder.properties().hasProperty(OnionCropBlock.AGE, 3))));
+
+        add(ModBlocks.GOJI_BERRY_BUSH.get(), (block) -> (LootTable.Builder) this.applyExplosionDecay(block,
+                LootTable.lootTable().withPool(LootPool.lootPool()
+                        .when(LootItemBlockStatePropertyCondition
+                                .hasBlockStateProperties(ModBlocks.GOJI_BERRY_BUSH.get())
+                                .setProperties(Builder.properties().hasProperty(SweetBerryBushBlock.AGE, 3)))
+                        .add(LootItem.lootTableItem(ModItems.GOJI_BERRY))
+                        .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0F, 3.0F)))
+                        .apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE))))
+                        .withPool(LootPool.lootPool()
+                                .when(LootItemBlockStatePropertyCondition
+                                        .hasBlockStateProperties(ModBlocks.GOJI_BERRY_BUSH.get())
+                                        .setProperties(Builder.properties().hasProperty(SweetBerryBushBlock.AGE, 2)))
+                                .add(LootItem.lootTableItem(ModItems.GOJI_BERRY))
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
+                                .apply(ApplyBonusCount
+                                        .addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE))))));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops,

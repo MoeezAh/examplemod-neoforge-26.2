@@ -21,6 +21,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Blizzard Staff** — a staff item with a single-item stack limit.
 - **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
 - **Onion Seeds** — plantable seeds used to grow Onion Crops.
+- **Goji Berries** — a harvestable berry item gathered from a Goji Berry Bush.
 - **End Fire Starter** — a furnace fuel item that stacks to 32.
 - **Azurite Equipment** — a sword, pickaxe, axe, shovel, hoe, and spear crafted from Azurite.
 - **Azurite Armor** — a four-piece armor set crafted from Azurite.
@@ -93,6 +94,7 @@ Azurite Horse Armor uses the Azurite armor material and has a dedicated horse eq
 - Pedestal
 - Magic Block
 - Onion Crop
+- Goji Berry Bush
 
 The ore variants award experience when mined. Azurite blocks, stairs, and slabs require the correct pickaxe for drops and use amethyst-like sounds; ore blocks likewise require the correct tool.
 
@@ -124,6 +126,10 @@ The Pedestal is a decorative block with a narrow column design. It requires a pi
 
 The Magic Block is a pickaxe-mineable block that drops itself when broken. Use it with an empty hand to create an end-rod particle and play an amethyst sound. Players who stand on it receive the **Glowing** effect for 15 seconds. Item entities that touch it transform one-for-one into diamonds when they contain an iron ingot, redstone, a copper ingot, or Azurite. Its tooltip identifies it as magical.
 
+### Goji Berry Bush
+
+The Goji Berry Bush is a crop-like plant that grows through several stages. Once mature, it can be harvested for Goji Berries, and the bush will regrow from a lower stage after picking. It drops multiple berries at higher growth stages and follows the same general berry-bush behavior as other plant-based crops.
+
 ## Paintings
 
 The mod includes three custom paintings by NanoAttack:
@@ -144,8 +150,8 @@ The mod includes three custom paintings by NanoAttack:
 
 The mod includes two Creative Mode tabs:
 
-- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
-- **Azurite Building Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal and Magic Block.
+- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, Goji Berries, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Azurite Building Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal, Magic Block, and Goji Berry Bush.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.
 

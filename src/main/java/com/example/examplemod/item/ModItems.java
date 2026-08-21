@@ -92,6 +92,9 @@ public class ModItems {
     public static final DeferredItem<Item> ONION_SEED = ITEMS.registerItem("onion_seeds",
             properties -> new BlockItem(ModBlocks.ONION_CROP.get(), properties));
 
+    public static final DeferredItem<Item> GOJI_BERRY = ITEMS.registerItem("goji_berries",
+            properties -> new BlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), properties.food(ModFoods.GOJI_BERRY)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

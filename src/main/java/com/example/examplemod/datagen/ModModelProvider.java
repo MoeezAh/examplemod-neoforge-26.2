@@ -13,16 +13,22 @@ import com.example.examplemod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
+import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ItemModelUtils;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
+import net.minecraft.client.renderer.block.dispatch.Variant;
 import net.minecraft.client.renderer.item.ClientItem;
 import net.minecraft.client.renderer.item.ConditionalItemModel;
 import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.random.WeightedList;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class ModModelProvider extends ModelProvider {
 
@@ -100,5 +106,24 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createNonTemplateModelBlock(ModBlocks.PEDESTAL_BLOCK.get());
 
         blockModels.createCropBlock(ModBlocks.ONION_CROP.get(), OnionCropBlock.AGE, 0, 1, 2, 3);
+
+        blockModels.registerSimpleFlatItemModel(ModItems.GOJI_BERRY.get());
+        blockModels.blockStateOutput.accept(MultiVariantGenerator.dispatch(ModBlocks.GOJI_BERRY_BUSH.get())
+                .with(PropertyDispatch.initial(BlockStateProperties.AGE_3)
+                        .generate(
+                                (age) -> plainVariant(blockModels.createSuffixedVariant(ModBlocks.GOJI_BERRY_BUSH.get(),
+                                        "_stage" + age, ModelTemplates.CROSS, TextureMapping::cross)))));
+    }
+
+    public static Variant plainModel(Identifier model) {
+        return new Variant(model);
+    }
+
+    public static MultiVariant variant(Variant variant) {
+        return new MultiVariant(WeightedList.of(variant));
+    }
+
+    public static MultiVariant plainVariant(Identifier model) {
+        return variant(plainModel(model));
     }
 }

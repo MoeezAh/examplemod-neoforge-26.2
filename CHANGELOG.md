@@ -70,3 +70,10 @@ Changes are listed in chronological order, from oldest to newest.
 - Fully grown Onion Crops drop Onions and Onion Seeds; immature crops drop seeds.
 - Added Onion Seeds to the Azurite Items Creative Mode tab.
 - Added composting support for Onion Seeds (30% chance) and Onions (50% chance).
+
+## 2026-08-21
+
+- Added the Goji Berry Bush, a multi-stage crop-like block that drops Goji Berries when harvested.
+- Added Goji Berries as a food item with custom berry-bush growth and harvest behavior.
+- Added generated block models, textures, and loot tables for the Goji Berry Bush.
+- Added Goji Berries to the Azurite Items Creative Mode tab.

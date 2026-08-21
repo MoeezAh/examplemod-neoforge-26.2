@@ -13,6 +13,11 @@ public class ModFoods {
             .saturationModifier(0.3f)
             .build();
 
+    public static final FoodProperties GOJI_BERRY = new FoodProperties.Builder()
+            .nutrition(1)
+            .saturationModifier(0.2f)
+            .build();
+
     public static final Consumable ONION_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(2.1f)
             .onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.NAUSEA, 400), 0.10f))
