@@ -44,7 +44,7 @@ Onion Seeds grow through four stages when planted on farmland. A fully grown Oni
 
 ### Metal Detector
 
-Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first ore in the common `c:ores` tag. When it finds one, the detector reports the block name and coordinates, plays an amethyst chime, and shows block particles. If nothing is found, it displays **"No valuables found."** Each use consumes one durability point. Hovering it prompts you to hold Shift; holding Shift displays usage guidance. The detector also increments the **Valuables Found** statistic on each successful discovery.
+Use the Metal Detector on a block to scan vertically downward, starting at the selected block, for the first ore in the common `c:ores` tag. When it finds one, the detector reports the block name and coordinates, plays a custom "valuables found" sound, and shows block particles. If nothing is found, it displays **"No valuables found."** and plays a matching custom failure sound. Each use consumes one durability point. Hovering it prompts you to hold Shift; holding Shift displays usage guidance. The detector also increments the **Valuables Found** statistic on each successful discovery.
 
 ### Data Tablet
 

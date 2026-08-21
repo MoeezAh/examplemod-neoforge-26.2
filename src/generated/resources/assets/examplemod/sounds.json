@@ -1,0 +1,14 @@
+{
+  "valuables_found": {
+    "sounds": [
+      "examplemod:valuables_found"
+    ],
+    "subtitle": "sounds.examplemod.valuables_found"
+  },
+  "valuables_not_found": {
+    "sounds": [
+      "examplemod:valuables_not_found"
+    ],
+    "subtitle": "sounds.examplemod.valuables_not_found"
+  }
+}

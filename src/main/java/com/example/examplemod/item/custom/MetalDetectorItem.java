@@ -4,6 +4,7 @@ import java.util.function.Consumer;
 
 import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.item.ModItems;
+import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.stat.ModStats;
 import com.example.examplemod.tags.ModTags;
 
@@ -50,8 +51,8 @@ public class MetalDetectorItem extends Item {
                     foundBlock = true;
 
                     // Play the sound
-                    level.playSound(null, positionClicked, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.0f,
-                            1.0f);
+                    level.playSound(null, positionClicked, ModSounds.VALUABLES_FOUND.get(), SoundSource.BLOCKS, 1.5f,
+                            0.8F + level.getRandom().nextFloat() * 0.4F);
 
                     // Spawn particles
                     spawnFoundParticles(level, positionClicked, blockState);
@@ -66,6 +67,9 @@ public class MetalDetectorItem extends Item {
 
             if (!foundBlock) {
                 outputNoValuableFound(player);
+                // Play the sound
+                level.playSound(null, positionClicked, ModSounds.VALUABLES_NOT_FOUND.get(), SoundSource.BLOCKS, 1.5f,
+                        0.8F + level.getRandom().nextFloat() * 0.4F);
             }
 
             // Damage the item

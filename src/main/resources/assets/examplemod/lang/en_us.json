@@ -64,6 +64,9 @@
   
   "stat.examplemod.valuables_found": "Valuables Found",
 
+  "sounds.examplemod.valuables_found": "Found Valuables",
+  "sounds.examplemod.valuables_not_found": "Did not fiund Valuables",
+
 
   "tooltip.examplemod.onion.tooltip": "§7Tasts like Onion.§r",
   "tooltip.examplemod.magic_block.tooltip": "§7Its quite §9MAGICAL§r.",

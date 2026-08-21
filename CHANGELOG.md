@@ -80,3 +80,4 @@ Changes are listed in chronological order, from oldest to newest.
 - Added Rice Crop support with a water-dependent crop block and Rice Shoot placement item.
 - Added generated Rice Crop models, textures, and loot tables for the new crop lifecycle.
 - Added Rice Shoot to the Azurite Items Creative Mode tab.
+- Added custom Metal Detector sounds for successful finds and failed scans, with sound definitions registered through the mod's data generation pipeline.
