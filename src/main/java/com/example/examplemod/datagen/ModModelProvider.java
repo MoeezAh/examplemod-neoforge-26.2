@@ -6,6 +6,7 @@ import com.example.examplemod.ExampleMod;
 import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.blocks.custom.AzuriteLampBlock;
 import com.example.examplemod.blocks.custom.OnionCropBlock;
+import com.example.examplemod.blocks.custom.RiceCropBlock;
 import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.item.ModArmorMaterials;
 import com.example.examplemod.item.ModItems;
@@ -113,6 +114,9 @@ public class ModModelProvider extends ModelProvider {
                         .generate(
                                 (age) -> plainVariant(blockModels.createSuffixedVariant(ModBlocks.GOJI_BERRY_BUSH.get(),
                                         "_stage" + age, ModelTemplates.CROSS, TextureMapping::cross)))));
+
+        blockModels.createCropBlock(ModBlocks.RICE_CROP.get(), RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
+
     }
 
     public static Variant plainModel(Identifier model) {

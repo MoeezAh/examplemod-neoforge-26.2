@@ -4,6 +4,7 @@ import java.util.Set;
 
 import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.blocks.custom.OnionCropBlock;
+import com.example.examplemod.blocks.custom.RiceCropBlock;
 import com.example.examplemod.item.ModItems;
 
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
@@ -89,6 +90,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                                 .apply(ApplyBonusCount
                                         .addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE))))));
+
+        add(ModBlocks.RICE_CROP.get(), createCropDrops(ModBlocks.RICE_CROP.get(), ModItems.RICE_SHOOT.get(),
+                ModItems.RICE_SHOOT.get(),
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.RICE_CROP.get()).setProperties(
+                        StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE, 7))));
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops,

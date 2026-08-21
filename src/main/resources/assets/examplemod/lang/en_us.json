@@ -26,6 +26,8 @@
   "block.examplemod.pedestal": "Pedestal",
   "block.examplemod.onion_crop": "Onion Crop",
   "block.examplemod.goji_berry_bush": "Goji Berry Bush",
+  "block.examplemod.rice_crop": "Rice Crop",
+
 
   "item.examplemod.metal_detector": "Metal Detector",
   "item.examplemod.metal_detector.no_valuables": "No valuables found.",
@@ -49,6 +51,7 @@
   "item.examplemod.blizzard_staff": "Blizzard Staff",
   "item.examplemod.onion_seeds": "Onion Seeds",
   "item.examplemod.goji_berries": "Goji Berries",
+  "item.examplemod.rice_shoot": "Rice Shoot",
 
 
   "painting.examplemod.shrimp.title": "Shrimp",

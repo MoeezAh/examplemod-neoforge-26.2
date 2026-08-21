@@ -8,6 +8,7 @@ import com.example.examplemod.blocks.custom.GojiBerryBushBlock;
 import com.example.examplemod.blocks.custom.MagicBlock;
 import com.example.examplemod.blocks.custom.OnionCropBlock;
 import com.example.examplemod.blocks.custom.PedestalBlock;
+import com.example.examplemod.blocks.custom.RiceCropBlock;
 import com.example.examplemod.item.ModItems;
 
 import net.minecraft.network.chat.Component;
@@ -142,6 +143,10 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> GOJI_BERRY_BUSH = BLOCKS.registerBlock("goji_berry_bush",
             properties -> new GojiBerryBushBlock(properties.randomTicks().sound(SoundType.SWEET_BERRY_BUSH)
+                    .noCollision().pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> RICE_CROP = BLOCKS.registerBlock("rice_crop",
+            properties -> new RiceCropBlock(properties.randomTicks().sound(SoundType.CROP).instabreak()
                     .noCollision().pushReaction(PushReaction.DESTROY)));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name,

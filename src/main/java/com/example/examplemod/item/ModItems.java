@@ -12,6 +12,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PlaceOnWaterBlockItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
@@ -94,6 +95,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> GOJI_BERRY = ITEMS.registerItem("goji_berries",
             properties -> new BlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), properties.food(ModFoods.GOJI_BERRY)));
+
+    public static final DeferredItem<Item> RICE_SHOOT = ITEMS.registerItem("rice_shoot",
+            properties -> new PlaceOnWaterBlockItem(ModBlocks.RICE_CROP.get(), properties));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

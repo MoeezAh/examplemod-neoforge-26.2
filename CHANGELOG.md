@@ -77,3 +77,6 @@ Changes are listed in chronological order, from oldest to newest.
 - Added Goji Berries as a food item with custom berry-bush growth and harvest behavior.
 - Added generated block models, textures, and loot tables for the Goji Berry Bush.
 - Added Goji Berries to the Azurite Items Creative Mode tab.
+- Added Rice Crop support with a water-dependent crop block and Rice Shoot placement item.
+- Added generated Rice Crop models, textures, and loot tables for the new crop lifecycle.
+- Added Rice Shoot to the Azurite Items Creative Mode tab.
