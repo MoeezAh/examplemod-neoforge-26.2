@@ -81,3 +81,7 @@ Changes are listed in chronological order, from oldest to newest.
 - Added generated Rice Crop models, textures, and loot tables for the new crop lifecycle.
 - Added Rice Shoot to the Azurite Items Creative Mode tab.
 - Added custom Metal Detector sounds for successful finds and failed scans, with sound definitions registered through the mod's data generation pipeline.
+
+## 2026-08-25
+
+- Updated the NeoForge requirement to `26.2.0.67`.
