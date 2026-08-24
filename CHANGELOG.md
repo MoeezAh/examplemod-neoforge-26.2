@@ -85,3 +85,5 @@ Changes are listed in chronological order, from oldest to newest.
 ## 2026-08-25
 
 - Updated the NeoForge requirement to `26.2.0.67`.
+- Added the **Bar Brawl Music Disc**, an EPIC single-item music disc that plays Bryan Tech's CC0 track “Bar Brawl” for 162 seconds.
+- Added the music disc to the Azurite Items Creative Mode tab and the vanilla creeper music-disc drop tag.

@@ -20,6 +20,9 @@ public class ModSoundsProvider extends SoundDefinitionsProvider {
 
         add(ModSounds.VALUABLES_NOT_FOUND.get(), definition().subtitle("sounds.examplemod.valuables_not_found")
                 .with(sound(Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "valuables_not_found"))));
+
+        add(ModSounds.BAR_BRAWL.get(), definition().subtitle("sounds.examplemod.bar_brawl")
+                .with(sound(Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "bar_brawl")).stream()));
     }
 
 }

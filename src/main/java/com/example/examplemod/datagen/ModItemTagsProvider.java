@@ -44,6 +44,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.FOOT_ARMOR).add(ModItems.AZURITE_BOOTS.getKey());
 
         tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.CURVED_BOW.getKey());
+        tag(ItemTags.CREEPER_DROP_MUSIC_DISCS).add(ModItems.BAR_BRAWL_MUSIC_DISC.getKey());
     }
 
 }

@@ -5,9 +5,13 @@ import java.util.function.Supplier;
 import com.example.examplemod.ExampleMod;
 
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.item.JukeboxSong;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModSounds {
@@ -21,6 +25,19 @@ public class ModSounds {
             () -> SoundEvent
                     .createVariableRangeEvent(
                             Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "valuables_not_found")));
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> BAR_BRAWL = registerJukeboxSong("bar_brawl");
+
+    public static final ResourceKey<JukeboxSong> BAR_BRAWL_KEY = createSong("bar_brawl");
+
+    private static DeferredHolder<SoundEvent, SoundEvent> registerJukeboxSong(String name) {
+        return SOUND_EVENTS.register(name,
+                () -> SoundEvent.createVariableRangeEvent(Identifier.fromNamespaceAndPath((ExampleMod.MOD_ID), name)));
+    }
+
+    private static ResourceKey<JukeboxSong> createSong(String name) {
+        return ResourceKey.create(Registries.JUKEBOX_SONG, Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, name));
+    }
 
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);

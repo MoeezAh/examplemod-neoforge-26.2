@@ -5,6 +5,7 @@ import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.food.ModFoods;
 import com.example.examplemod.item.custom.DataTabletItem;
 import com.example.examplemod.item.custom.MetalDetectorItem;
+import com.example.examplemod.sound.ModSounds;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.AxeItem;
@@ -13,6 +14,7 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PlaceOnWaterBlockItem;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
@@ -98,6 +100,10 @@ public class ModItems {
 
     public static final DeferredItem<Item> RICE_SHOOT = ITEMS.registerItem("rice_shoot",
             properties -> new PlaceOnWaterBlockItem(ModBlocks.RICE_CROP.get(), properties));
+
+    public static final DeferredItem<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.registerItem("bar_brawl_music_disc",
+            properties -> new Item(
+                    properties.jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).rarity(Rarity.EPIC).stacksTo(1)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

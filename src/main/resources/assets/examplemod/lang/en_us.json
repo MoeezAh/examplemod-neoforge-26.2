@@ -52,6 +52,7 @@
   "item.examplemod.onion_seeds": "Onion Seeds",
   "item.examplemod.goji_berries": "Goji Berries",
   "item.examplemod.rice_shoot": "Rice Shoot",
+  "item.examplemod.bar_brawl_music_disc": "Bar Brawl Music Disc",
 
 
   "painting.examplemod.shrimp.title": "Shrimp",
@@ -61,6 +62,7 @@
   "painting.examplemod.world.title": "World",
   "painting.examplemod.world.author": "NanoAttack",
   
+  "jukebox_song.examplemod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
   
   "stat.examplemod.valuables_found": "Valuables Found",
 

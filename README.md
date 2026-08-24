@@ -23,6 +23,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Onion Seeds** — plantable seeds used to grow Onion Crops.
 - **Goji Berries** — a harvestable berry item gathered from a Goji Berry Bush.
 - **Rice Shoot** — a water-planted seed item used to grow Rice Crops.
+- **Bar Brawl Music Disc** — an EPIC music disc featuring “Bar Brawl” by Bryan Tech.
 - **End Fire Starter** — a furnace fuel item that stacks to 32.
 - **Azurite Equipment** — a sword, pickaxe, axe, shovel, hoe, and spear crafted from Azurite.
 - **Azurite Armor** — a four-piece armor set crafted from Azurite.
@@ -144,6 +145,10 @@ The mod includes three custom paintings by NanoAttack:
 - **Saw Them** — a 2×2 painting with a notable scene.
 - **World** — a 2×2 painting depicting a world scene.
 
+## Music Disc
+
+The **Bar Brawl Music Disc** plays “Bar Brawl” by Bryan Tech (CC0) for 162 seconds. It outputs a comparator signal of 15 while playing, is available in the Azurite Items Creative Mode tab, and is included in the vanilla creeper music-disc drop tag.
+
 ## Obtaining Azurite
 
 - Smelt or blast Raw Azurite or any Azurite ore variant to obtain Azurite.
@@ -156,7 +161,7 @@ The mod includes three custom paintings by NanoAttack:
 
 The mod includes two Creative Mode tabs:
 
-- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, Goji Berries, Rice Shoot, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, Goji Berries, Rice Shoot, the Bar Brawl Music Disc, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
 - **Azurite Building Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal, Magic Block, Goji Berry Bush, and Rice Crop.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.

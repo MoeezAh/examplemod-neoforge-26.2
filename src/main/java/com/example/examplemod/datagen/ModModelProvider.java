@@ -74,7 +74,10 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.createFlatItemModel(ModItems.CURVED_BOW.get(), ModelTemplates.BOW);
         itemModels.generateBow(ModItems.CURVED_BOW.get());
+
         itemModels.declareCustomModelItem(ModItems.BLIZZARD_STAFF.get());
+
+        itemModels.generateFlatItem(ModItems.BAR_BRAWL_MUSIC_DISC.get(), ModelTemplates.FLAT_ITEM);
 
         /* BLOCKS */
 
@@ -116,7 +119,6 @@ public class ModModelProvider extends ModelProvider {
                                         "_stage" + age, ModelTemplates.CROSS, TextureMapping::cross)))));
 
         blockModels.createCropBlock(ModBlocks.RICE_CROP.get(), RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
-
     }
 
     public static Variant plainModel(Identifier model) {

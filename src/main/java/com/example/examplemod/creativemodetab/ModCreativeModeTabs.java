@@ -53,6 +53,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.GOJI_BERRY);
                         output.accept(ModItems.RICE_SHOOT);
 
+                        output.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
+
                     }).build());
 
     public static final Supplier<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register(
