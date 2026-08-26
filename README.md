@@ -7,7 +7,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - Minecraft `26.2`
 - NeoForge `26.2.0.67` or newer
 - Mod ID: `examplemod`
-- Version: `1.1.0-26.2`
+- Version: `1.39.0-26.2`
 
 ## Content
 
@@ -141,6 +141,8 @@ Rice is grown from Rice Shoots planted in water. The crop progresses through sev
 ## Effects
 
 The **Stinky** effect damages nearby living entities every tick. Its affected radius is based on the effect amplifier: amplifier 0 affects entities within 1 block, with each additional amplifier level increasing the radius by 1 block. Damage scales with the amplifier level.
+
+Stinky damage uses a dedicated damage type with custom death messages. It has 0.1 exhaustion and scales when caused by a living non-player entity.
 
 ## Potions
 

@@ -72,6 +72,9 @@
 
   "effect.examplemod.stinky": "Stinky",
   "effect.examplemod.stinky.description": "Causes entities around you to take damage.",
+  
+  "death.attack.stinky": "%s was stinkied to death.",
+  "death.attack.stinky.player": "%s was stinkied to death trying to outrun %s.",
 
 
   "sounds.examplemod.valuables_found": "Found Valuables",

@@ -2,6 +2,8 @@ package com.example.examplemod.effect;
 
 import java.util.List;
 
+import com.example.examplemod.datagen.ModDamageTypes;
+
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -22,7 +24,8 @@ public class StinkyEffect extends MobEffect {
 
         for (Entity entity : entities) {
             if (entity instanceof LivingEntity livingEntity) {
-                livingEntity.hurtServer(serverLevel, mob.damageSources().magic(), 0.25F * (amplification + 1));
+                livingEntity.hurtServer(serverLevel, ModDamageTypes.create(serverLevel, ModDamageTypes.STINKY),
+                        0.25F * (amplification + 1));
             }
         }
 
