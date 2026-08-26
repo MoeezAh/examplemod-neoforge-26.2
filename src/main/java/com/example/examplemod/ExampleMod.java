@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import com.example.examplemod.blocks.ModBlocks;
 import com.example.examplemod.creativemodetab.ModCreativeModeTabs;
 import com.example.examplemod.data.ModDataComponents;
+import com.example.examplemod.effect.ModEffects;
 import com.example.examplemod.item.ModItems;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.stat.ModStats;
@@ -111,6 +112,8 @@ public class ExampleMod {
         ModStats.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
+        ModEffects.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod)

@@ -7,7 +7,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - Minecraft `26.2`
 - NeoForge `26.2.0.67` or newer
 - Mod ID: `examplemod`
-- Version: `1.0.0-26.2`
+- Version: `1.1.0-26.2`
 
 ## Content
 
@@ -136,6 +136,10 @@ The Goji Berry Bush is a crop-like plant that grows through several stages. Once
 ### Rice Crop
 
 Rice is grown from Rice Shoots planted in water. The crop progresses through several growth stages and is designed as a water-dependent crop that only survives when planted over water. A fully grown Rice Crop produces the harvestable rice item represented by the Rice Shoot item used for planting.
+
+## Effects
+
+The **Stinky** effect damages nearby living entities every tick. Its affected radius is based on the effect amplifier: amplifier 0 affects entities within 1 block, with each additional amplifier level increasing the radius by 1 block. Damage scales with the amplifier level.
 
 ## Paintings
 

@@ -66,6 +66,10 @@
   
   "stat.examplemod.valuables_found": "Valuables Found",
 
+  "effect.examplemod.stinky": "Stinky",
+  "effect.examplemod.stinky.description": "Causes entities around you to take damage.",
+
+
   "sounds.examplemod.valuables_found": "Found Valuables",
   "sounds.examplemod.valuables_not_found": "Did not fiund Valuables",
 

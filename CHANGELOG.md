@@ -87,3 +87,8 @@ Changes are listed in chronological order, from oldest to newest.
 - Updated the NeoForge requirement to `26.2.0.67`.
 - Added the **Bar Brawl Music Disc**, an EPIC single-item music disc that plays Bryan Tech's CC0 track “Bar Brawl” for 162 seconds.
 - Added the music disc to the Azurite Items Creative Mode tab and the vanilla creeper music-disc drop tag.
+
+## 2026-08-26
+
+- Bumped the mod version from `1.0.0-26.2` to `1.1.0-26.2` for this recorded change.
+- Added the registered **Stinky** effect, which damages nearby living entities every tick and scales its affected radius and damage with the effect amplifier.
