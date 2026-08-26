@@ -92,3 +92,5 @@ Changes are listed in chronological order, from oldest to newest.
 
 - Bumped the mod version from `1.0.0-26.2` to `1.1.0-26.2` for this recorded change.
 - Added the registered **Stinky** effect, which damages nearby living entities every tick and scales its affected radius and damage with the effect amplifier.
+- Bumped the mod version from `1.1.0-26.2` to `1.2.0-26.2` for this recorded change.
+- Added **Stinky Potion**, brewed from an Awkward Potion and dirt, which applies the Stinky effect for 60 seconds and supports splash and lingering variants.

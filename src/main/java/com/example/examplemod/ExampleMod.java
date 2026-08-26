@@ -7,6 +7,7 @@ import com.example.examplemod.creativemodetab.ModCreativeModeTabs;
 import com.example.examplemod.data.ModDataComponents;
 import com.example.examplemod.effect.ModEffects;
 import com.example.examplemod.item.ModItems;
+import com.example.examplemod.potion.ModPotions;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.stat.ModStats;
 import com.mojang.logging.LogUtils;
@@ -114,6 +115,8 @@ public class ExampleMod {
         ModSounds.register(modEventBus);
 
         ModEffects.register(modEventBus);
+
+        ModPotions.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod)

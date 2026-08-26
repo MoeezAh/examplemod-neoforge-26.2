@@ -54,6 +54,10 @@
   "item.examplemod.rice_shoot": "Rice Shoot",
   "item.examplemod.bar_brawl_music_disc": "Bar Brawl Music Disc",
 
+  "item.minecraft.potion.effect.stinky_potion": "Stinky Potion",
+  "item.minecraft.splash_potion.effect.stinky_potion": "Stinky Splash Potion",
+  "item.minecraft.lingering_potion.effect.stinky_potion": "Stinky Lingering Potion",
+
 
   "painting.examplemod.shrimp.title": "Shrimp",
   "painting.examplemod.shrimp.author": "NanoAttack",

@@ -24,6 +24,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Goji Berries** — a harvestable berry item gathered from a Goji Berry Bush.
 - **Rice Shoot** — a water-planted seed item used to grow Rice Crops.
 - **Bar Brawl Music Disc** — an EPIC music disc featuring “Bar Brawl” by Bryan Tech.
+- **Stinky Potion** — a potion that applies the Stinky effect for 60 seconds.
 - **End Fire Starter** — a furnace fuel item that stacks to 32.
 - **Azurite Equipment** — a sword, pickaxe, axe, shovel, hoe, and spear crafted from Azurite.
 - **Azurite Armor** — a four-piece armor set crafted from Azurite.
@@ -141,6 +142,10 @@ Rice is grown from Rice Shoots planted in water. The crop progresses through sev
 
 The **Stinky** effect damages nearby living entities every tick. Its affected radius is based on the effect amplifier: amplifier 0 affects entities within 1 block, with each additional amplifier level increasing the radius by 1 block. Damage scales with the amplifier level.
 
+## Potions
+
+Brew a **Stinky Potion** by combining an Awkward Potion with dirt. The potion applies the Stinky effect at amplifier 0 for 1,200 ticks (60 seconds). Splash and lingering variants are also available through the standard potion conversion recipes.
+
 ## Paintings
 
 The mod includes three custom paintings by NanoAttack:
@@ -165,7 +170,7 @@ The **Bar Brawl Music Disc** plays “Bar Brawl” by Bryan Tech (CC0) for 162 s
 
 The mod includes two Creative Mode tabs:
 
-- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, Goji Berries, Rice Shoot, the Bar Brawl Music Disc, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, Goji Berries, Rice Shoot, the Bar Brawl Music Disc, Stinky Potion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
 - **Azurite Building Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal, Magic Block, Goji Berry Bush, and Rice Crop.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.
