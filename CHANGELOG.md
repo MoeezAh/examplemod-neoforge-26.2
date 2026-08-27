@@ -100,3 +100,4 @@ Changes are listed in chronological order, from oldest to newest.
 ## 2026-08-28
 
 - Updated the NeoForge version to `26.2.0.69`.
+- Added `IMPLEMENTATION_HISTORY.md`, a reusable implementation guide covering the mod's feature patterns, supporting resources, and validation workflow.

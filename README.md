@@ -193,6 +193,10 @@ Run the following from the project root on Windows:
 
 The built JAR will be written to `build/libs`.
 
+## Implementation Guide
+
+See [IMPLEMENTATION_HISTORY.md](IMPLEMENTATION_HISTORY.md) for a reusable guide to the mod's feature implementations, including registries, data generation, resources, custom behavior, and validation workflows.
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for the dated, oldest-first record of project changes.
