@@ -96,3 +96,7 @@ Changes are listed in chronological order, from oldest to newest.
 - Added **Stinky Potion**, brewed from an Awkward Potion and dirt, which applies the Stinky effect for 60 seconds and supports splash and lingering variants.
 - Updated the mod version to `1.39.0-26.2`.
 - Added a dedicated `stinky` damage type with custom death messages for damage caused by the Stinky effect.
+
+## 2026-08-28
+
+- Updated the NeoForge version to `26.2.0.69`.
