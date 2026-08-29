@@ -2,6 +2,17 @@
 
 Changes are listed in chronological order, from oldest to newest.
 
+## 2026-08-30
+
+- Bumped the mod version from `1.39.0-26.2` to `1.40.0-26.2` for this recorded change.
+- Added `IMPLEMENTATION_HISTORY.md`, a reusable implementation guide covering the mod's registry, content, resource-generation, and validation patterns.
+- Updated the documentation to match the current NeoForge target of `26.2.0.72`.
+
+## 2026-08-28
+
+- Updated the NeoForge version to `26.2.0.69`.
+- Added `IMPLEMENTATION_HISTORY.md`, a reusable implementation guide covering the mod's feature patterns, supporting resources, and validation workflow.
+
 ## 2026-08-05
 
 - Established the Azurite content foundation: resources, ore variants, storage blocks, recipes, loot tables, models, and advancements.
