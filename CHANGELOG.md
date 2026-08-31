@@ -4,7 +4,11 @@ Changes are listed in chronological order, from oldest to newest.
 
 ## 2026-08-31
 
-- Bumped the mod version from `1.40.0-26.2` to `1.41.0-26.2` for this recorded change.
+- Added the `Radiation Staff`, a single-stack EPIC item with a generated flat handheld model and a dedicated creative-tab entry.
+- Added the `Wanderer` painting variant, including its translation strings, generated datapack JSON, and placeable painting tag registration.
+- Expanded the implementation guide with developer-facing instructions for adding both a staff-like item and a painting in-game.
+- Updated the mod docs and implementation guide to reflect the latest feature set, item registry additions, and painting content.
+- Bumped the mod version from `1.41.0-26.2` to `1.42.0-26.2` for this recorded change.
 - Updated the NeoForge target to `26.2.0.75` for the current change set.
 - Synced the documentation references to the current NeoForge compatibility target.
 

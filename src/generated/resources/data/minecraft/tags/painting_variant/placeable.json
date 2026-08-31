@@ -11,6 +11,10 @@
     {
       "id": "examplemod:world",
       "required": false
+    },
+    {
+      "id": "examplemod:wanderer",
+      "required": false
     }
   ]
 }

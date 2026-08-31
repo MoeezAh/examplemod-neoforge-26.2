@@ -7,7 +7,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - Minecraft `26.2`
 - NeoForge `26.2.0.75` or newer
 - Mod ID: `examplemod`
-- Version: `1.41.0-26.2`
+- Version: `1.42.0-26.2`
 
 ## Content
 
@@ -19,6 +19,7 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 - **Data Tablet** — a utility item that stores the last ore coordinates found by the Metal Detector.
 - **Curved Bow** — a ranged weapon with 500 durability, enchantable with bow-specific enchantments.
 - **Blizzard Staff** — a staff item with a single-item stack limit.
+- **Radiation Staff** — an EPIC-tier staff item with a unique visual identity and a single-item stack limit.
 - **Onion** — a consumable food item that restores 2 hunger points and 0.3 saturation.
 - **Onion Seeds** — plantable seeds used to grow Onion Crops.
 - **Goji Berries** — a harvestable berry item gathered from a Goji Berry Bush.
@@ -59,6 +60,10 @@ The Curved Bow is a ranged weapon with 500 durability points. It fires arrows an
 ### Blizzard Staff
 
 The Blizzard Staff is a staff item with a unique 3D model. It has a single-item stack limit, meaning only one can be held in a stack at a time.
+
+### Radiation Staff
+
+The Radiation Staff is an EPIC-tier staff item with a dedicated 3D item model and a single-item stack limit. It is featured in the Azurite Items creative tab and acts as a high-tier utility or combat item that fits the mod's more advanced endgame theme.
 
 ### Azurite Tools and Spear
 
@@ -150,11 +155,12 @@ Brew a **Stinky Potion** by combining an Awkward Potion with dirt. The potion ap
 
 ## Paintings
 
-The mod includes three custom paintings by NanoAttack:
+The mod includes four custom paintings:
 
-- **Shrimp** — a 2×1 painting featuring a shrimp design.
-- **Saw Them** — a 2×2 painting with a notable scene.
-- **World** — a 2×2 painting depicting a world scene.
+- **Shrimp** — a 2×1 painting featuring a shrimp design by NanoAttack.
+- **Saw Them** — a 2×2 painting with a notable scene by NanoAttack.
+- **World** — a 2×2 painting depicting a world scene by NanoAttack.
+- **Wanderer** — a 1×2 painting by PlatinumG17.
 
 ## Music Disc
 
@@ -172,7 +178,7 @@ The **Bar Brawl Music Disc** plays “Bar Brawl” by Bryan Tech (CC0) for 162 s
 
 The mod includes two Creative Mode tabs:
 
-- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, Onion, Onion Seeds, Goji Berries, Rice Shoot, the Bar Brawl Music Disc, Stinky Potion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
+- **Azurite Items**: Raw Azurite, Azurite, the Metal Detector, the Data Tablet, the Curved Bow, the Blizzard Staff, the Radiation Staff, Onion, Onion Seeds, Goji Berries, Rice Shoot, the Bar Brawl Music Disc, Stinky Potion, End Fire Starter, Azurite tools and spear, the full Azurite armor set, and Azurite Horse Armor.
 - **Azurite Building Blocks**: All Azurite blocks and ore variants, including Stairs, Slabs, redstone components, fencing, Doors, Trapdoors, and the Lamp, plus the Pedestal, Magic Block, Goji Berry Bush, and Rice Crop.
 
 Raw Azurite and Azurite are also available in Minecraft's Ingredients tab, and the Block of Azurite appears in Building Blocks. The Azurite Sword, Spear, armor set, and Horse Armor are also available in Minecraft's Combat tab.

@@ -58,6 +58,9 @@
   "item.minecraft.splash_potion.effect.stinky_potion": "Stinky Splash Potion",
   "item.minecraft.lingering_potion.effect.stinky_potion": "Stinky Lingering Potion",
 
+  "item.examplemod.radiation_staff": "Radiation Staff",
+
+
 
   "painting.examplemod.shrimp.title": "Shrimp",
   "painting.examplemod.shrimp.author": "NanoAttack",
@@ -65,6 +68,9 @@
   "painting.examplemod.saw_them.author": "NanoAttack",
   "painting.examplemod.world.title": "World",
   "painting.examplemod.world.author": "NanoAttack",
+  "painting.examplemod.wanderer.title": "Wanderer",
+  "painting.examplemod.wanderer.author": "PlatinumG17",
+  
   
   "jukebox_song.examplemod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
   

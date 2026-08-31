@@ -105,6 +105,9 @@ public class ModItems {
             properties -> new Item(
                     properties.jukeboxPlayable(ModSounds.BAR_BRAWL_KEY).rarity(Rarity.EPIC).stacksTo(1)));
 
+    public static final DeferredItem<Item> RADIATION_STAFF = ITEMS.registerItem("radiation_staff",
+            properties -> new Item(properties.rarity(Rarity.EPIC).stacksTo(1)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

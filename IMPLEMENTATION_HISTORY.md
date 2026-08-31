@@ -373,6 +373,55 @@ For each sound, register a `SoundEvent`, add an OGG file under `assets/examplemo
 
 The Metal Detector has separate custom sounds for successful and unsuccessful scans.
 
+## Radiation Staff
+
+The `Radiation Staff` fits the same pattern as other high-tier utility items: it is a small, single-stack, high-rarity item that needs only a few pieces of wiring to work cleanly in the registry, data generation, and creative tab. It is intentionally simple to implement, which makes it a useful reference for future staff-like or EPIC-tier specialty items.
+
+### Registration
+
+Start in `ModItems` by creating a single-stack `DeferredItem<Item>` and giving it `Rarity.EPIC` so it reads as a premium item in the inventory and creative menu:
+
+```java
+public static final DeferredItem<Item> RADIATION_STAFF = ITEMS.registerItem("radiation_staff",
+        properties -> new Item(properties.rarity(Rarity.EPIC).stacksTo(1)));
+```
+
+This pattern works well when the item is mostly a visual collectible, special tool, or cosmetic utility object rather than a complex gameplay item. The key details are:
+
+- use `stacksTo(1)` for a single-item weapon or staff feel,
+- set `Rarity.EPIC` to make the item stand out,
+- keep the runtime class minimal unless custom behavior is required later.
+
+### Model generation
+
+The generated asset pipeline creates the item model from the registry entry. In `ModModelProvider`, add the item model generation call to the standard flat handheld model workflow:
+
+```java
+itemModels.generateFlatItem(ModItems.RADIATION_STAFF.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
+```
+
+This matches the same approach used for other flat item assets and produces the generated JSON under the `src/generated/resources/assets/examplemod/` tree. The generated output includes both the item definition and the model reference, so the item appears in the inventory without needing custom manual JSON editing for the base model result.
+
+### Language and localization
+
+Add the display name in `src/main/resources/assets/examplemod/lang/en_us.json` so the item shows the correct user-facing label:
+
+```json
+"item.examplemod.radiation_staff": "Radiation Staff"
+```
+
+This should be paired with a matching asset texture, usually placed under `src/main/resources/assets/examplemod/textures/item/` before datagen runs. The generated model outputs reference the texture path automatically, so the item name and rendered icon stay aligned.
+
+### Creative Mode tab
+
+Add the item to the Azurite Items creative tab in `ModCreativeModeTabs` so it appears alongside the rest of the mod's premium and utility items:
+
+```java
+output.accept(ModItems.RADIATION_STAFF);
+```
+
+This is the final step that makes the item discoverable in survival and creative play; it should be placed in the item list with the other gear and utility entries for visual grouping.
+
 ## Music Disc
 
 A music disc needs an audio event, jukebox data, an item, and optional drop integration:
@@ -389,16 +438,93 @@ The Bar Brawl disc follows this sequence and uses streamed audio with a 162-seco
 
 ## Paintings
 
-Painting variants are dynamic datapack registry entries, not ordinary deferred items:
+The painting system is a datapack-style registry, not a normal item factory. To add a new painting in-game, you need to update the registry definition, datapack bootstrap, placeable tag, localization, and the texture asset. This is one of the easiest ways to add a decorative world element that is automatically recognized by Minecraft without needing custom runtime classes.
 
-1. Define `ResourceKey<PaintingVariant>` values.
-2. Bootstrap each `PaintingVariant` with width, height, title, and author translation keys.
-3. Add the painting registry to the `RegistrySetBuilder` in `ModDataPackProvider`.
-4. Add variants to `PaintingVariantTags.PLACEABLE`.
-5. Add painting textures and title/author translations.
-6. Run datagen to generate variant data and the placeable tag.
+### Registry and bootstrapping
 
-This mod contains Shrimp, Saw Them, and World painting variants.
+Start in `ModPaintings` by creating a `ResourceKey<PaintingVariant>` for the painting and registering it with a width, height, title key, and author key:
+
+```java
+public static final ResourceKey<PaintingVariant> WANDERER_KEY = create("wanderer");
+
+public static void bootstrap(BootstrapContext<PaintingVariant> context) {
+    register(context, WANDERER_KEY, 1, 2, true);
+}
+
+private static void register(final BootstrapContext<PaintingVariant> context,
+        final ResourceKey<PaintingVariant> key, final int width, final int height,
+        final boolean hasAuthor) {
+    context.register(key, new PaintingVariant(width, height, key.identifier(),
+            Optional.of(Component.translatable(key.identifier().toLanguageKey("painting", "title"))
+                    .withStyle(ChatFormatting.YELLOW)),
+            hasAuthor ? Optional.of(Component.translatable(key.identifier().toLanguageKey("painting", "author"))
+                    .withStyle(ChatFormatting.GRAY)) : Optional.empty()));
+}
+```
+
+This is the critical part because the actual in-game painting data is created during datapack bootstrap, not as a normal deferred registry item. The width and height are the real painting dimensions, so they must match the intended texture proportions.
+
+### Datapack registry wiring
+
+Once the painting keys exist, make sure `ModDataPackProvider` includes the painting registry in its `RegistrySetBuilder`:
+
+```java
+.add(Registries.PAINTING_VARIANT, ModPaintings::bootstrap)
+```
+
+This is required so the painting is actually bootstrapped into the live registry. Without this line, the painting definition exists only as Java code and never becomes part of the world data.
+
+### Placeable tag
+
+Paintings are not automatically valid for placement unless they are added to the `PaintingVariantTags.PLACEABLE` tag. In `ModPaintingTagsProvider`, append the new key to the placeable tag builder:
+
+```java
+this.getOrCreateRawBuilder(PaintingVariantTags.PLACEABLE)
+        .add(TagEntry.optionalElement(ModPaintings.SAW_THEM_KEY.identifier()))
+        .add(TagEntry.optionalElement(ModPaintings.SHRIMP_KEY.identifier()))
+        .add(TagEntry.optionalElement(ModPaintings.WORLD_KEY.identifier()))
+        .add(TagEntry.optionalElement(ModPaintings.WANDERER_KEY.identifier()));
+```
+
+This is the file that makes the painting usable in-world. If the tag is missing the new ID, the painting may exist in data but will not show up as placeable.
+
+### Localization
+
+Add title and author translation entries in `src/main/resources/assets/examplemod/lang/en_us.json`:
+
+```json
+"painting.examplemod.wanderer.title": "Wanderer",
+"painting.examplemod.wanderer.author": "PlatinumG17"
+```
+
+The title and author are used by the painting variant itself, and they must match the same key structure used in the bootstrap code (`painting.<namespace>.<id>.title` and `painting.<namespace>.<id>.author`).
+
+### Texture asset requirements
+
+A painting needs a texture file under the painting asset location, usually something like:
+
+- `src/main/resources/assets/examplemod/textures/painting/wanderer.png`
+- plus optional `.mcmeta` if the art needs special metadata
+
+The generated datapack JSON will reference the texture by `asset_id`, which is generated from the painting key. For example, the `wanderer` painting is represented by a resource ID like `examplemod:wanderer` and uses the matching texture file. The texture should match the width/height ratio used in the `PaintingVariant` definition; for example, a 1×2 painting uses a tall, narrow image.
+
+### Generated resources
+
+After the registry, tag, and localization are in place, run datagen so Minecraft generates the actual resource files. This creates the JSON entries under the generated data tree and updates the placeable tag. At that point, the painting is ready to be used by the game.
+
+### Validation checklist
+
+After adding a painting, make sure these all line up:
+
+1. The painting key exists in `ModPaintings` and has the correct width/height.
+2. `ModDataPackProvider` registers the painting registry.
+3. `ModPaintingTagsProvider` adds the painting to `PaintingVariantTags.PLACEABLE`.
+4. The title and author translations exist in `en_us.json`.
+5. The corresponding texture file exists in the painting asset folder.
+6. Datagen has been run so the generated JSON matches the Java definitions.
+7. In-game, the painting appears in the painting placement list and can be placed correctly on walls.
+
+This is the normal implementation path for a custom painting in this mod: registry key, datapack bootstrap registration, placeable tag, localization, and matching art asset. The `Wanderer` painting follows this exact pattern and is a good example for future decorative additions.
 
 ## Custom Statistic
 
