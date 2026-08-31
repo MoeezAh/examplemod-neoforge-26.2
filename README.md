@@ -5,9 +5,9 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 ## Compatibility
 
 - Minecraft `26.2`
-- NeoForge `26.2.0.72` or newer
+- NeoForge `26.2.0.75` or newer
 - Mod ID: `examplemod`
-- Version: `1.40.0-26.2`
+- Version: `1.41.0-26.2`
 
 ## Content
 

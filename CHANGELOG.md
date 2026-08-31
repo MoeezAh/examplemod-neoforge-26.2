@@ -2,6 +2,12 @@
 
 Changes are listed in chronological order, from oldest to newest.
 
+## 2026-08-31
+
+- Bumped the mod version from `1.40.0-26.2` to `1.41.0-26.2` for this recorded change.
+- Updated the NeoForge target to `26.2.0.75` for the current change set.
+- Synced the documentation references to the current NeoForge compatibility target.
+
 ## 2026-08-30
 
 - Bumped the mod version from `1.39.0-26.2` to `1.40.0-26.2` for this recorded change.
