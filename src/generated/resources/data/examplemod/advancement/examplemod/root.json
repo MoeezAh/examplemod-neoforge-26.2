@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "has_azurite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "examplemod:azurite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:gui/advancements/backgrounds/adventure",
+    "description": {
+      "translate": "advancements.examplemod.root.description"
+    },
+    "icon": {
+      "id": "examplemod:azurite"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.examplemod.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_azurite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

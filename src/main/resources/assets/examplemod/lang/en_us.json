@@ -102,5 +102,14 @@
   "examplemod.configuration.items": "Item List",
   "examplemod.configuration.logDirtBlock": "Log Dirt Block",
   "examplemod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "examplemod.configuration.magicNumber": "Magic Number"
+  "examplemod.configuration.magicNumber": "Magic Number",
+
+  "advancements.examplemod.root.title": "Example Mod Advancements",
+  "advancements.examplemod.root.description": "Example Mod Advancements Pretty Cool!",
+
+  "advancements.examplemod.plant_custom.title": "Plant a custom plant",
+  "advancements.examplemod.plant_custom.description": " Planting these custom plants is pretty neat!",
+
+  "advancements.examplemod.metal_detector.title": "Detected Valuables",
+  "advancements.examplemod.metal_detector.description": "Try finding valuables with the Metal Detector"
 }

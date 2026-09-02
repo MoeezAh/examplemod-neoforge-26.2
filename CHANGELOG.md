@@ -2,6 +2,15 @@
 
 Changes are listed in chronological order, from oldest to newest.
 
+## 2026-09-03
+
+- Bumped the mod version from `1.42.0-26.2` to `1.43.0-26.2` for the advancement update.
+- Added a data-generated advancement tree for the mod.
+- Added a root advancement that unlocks when the player obtains Azurite.
+- Added a custom-planting advancement that accepts Goji Berry Bush, Rice Crop, or Onion Crop placement through OR requirements.
+- Added a Metal Detector advancement triggered when the detector is used on a block with sky visibility.
+- Added localized advancement titles and descriptions and registered the advancement provider in the data-generation pipeline.
+
 ## 2026-08-31
 
 - Added the `Radiation Staff`, a single-stack EPIC item with a generated flat handheld model and a dedicated creative-tab entry.

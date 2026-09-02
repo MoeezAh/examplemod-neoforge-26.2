@@ -24,6 +24,7 @@ This document is a reusable cookbook for the features implemented in this NeoFor
 - [Berry bush](#berry-bush)
 - [Composting](#composting)
 - [Custom sounds](#custom-sounds)
+- [Advancements](#advancements)
 - [Music disc](#music-disc)
 - [Paintings](#paintings)
 - [Custom statistic](#custom-statistic)
@@ -217,6 +218,104 @@ Extend `Item`, give it durability, and override `useOn(UseOnContext)`:
 8. Damage the item after use.
 
 The Metal Detector scans downward for the first detectable block, reports its name and coordinates, stores the result in a tablet when available, awards the custom statistic, and plays separate success/failure sounds.
+
+## Advancements
+
+This addition follows [NeoForge Modding Tutorial - Minecraft 26.2: Custom Advancements | #41](https://www.youtube.com/watch?v=sIsU1P-lPOU) by Modding by Kaupenjoe.
+
+Advancements are data-generated JSON files backed by translated display text and one or more criteria. Keep advancement definitions in a dedicated `AdvancementProvider` instead of hand-writing generated JSON:
+
+### Provider registration
+
+Create `ModAdvancements` as an `AdvancementProvider` with an `AdvancementSubProvider`, then register it from `ExampleModDataGen`:
+
+```java
+generator.addProvider(true, new ModAdvancements(packOutput, lookupProvider));
+```
+
+The provider receives registry lookups through `HolderLookup.Provider`, which lets item and block criteria refer to registered mod content safely.
+
+### Root advancement
+
+Build the root advancement with an icon, translated title and description, a background, and an inventory criterion. In this mod, obtaining Azurite completes the root:
+
+```java
+AdvancementHolder root = Advancement.Builder.advancement()
+        .display(ModItems.AZURITE,
+                Component.translatable("advancements.examplemod.root.title"),
+                Component.translatable("advancements.examplemod.root.description"),
+                Identifier.withDefaultNamespace("gui/advancements/backgrounds/adventure"),
+                AdvancementType.TASK, false, false, false)
+        .addCriterion("has_azurite",
+                InventoryChangeTrigger.TriggerInstance.hasItems(
+                        ItemPredicate.Builder.item().of(items, ModItems.AZURITE)))
+        .save(output, Identifier.fromNamespaceAndPath(ExampleMod.MOD_ID, "examplemod/root"));
+```
+
+Use a stable namespaced ID and make the root's display settings intentional. The root is the parent for the feature-specific advancements below it.
+
+### Crop advancement with OR requirements
+
+Create a child advancement with the root as its parent and add one `ItemUsedOnLocationTrigger` criterion per supported crop:
+
+```java
+Advancement.Builder.advancement()
+        .parent(root)
+        .display(ModItems.RICE_SHOOT,
+                Component.translatable("advancements.examplemod.plant_custom.title"),
+                Component.translatable("advancements.examplemod.plant_custom.description"),
+                null, AdvancementType.TASK, true, true, false)
+        .requirements(AdvancementRequirements.Strategy.OR)
+        .addCriterion("berries",
+                ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(
+                        ModBlocks.GOJI_BERRY_BUSH.get()))
+        .addCriterion("rice",
+                ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(
+                        ModBlocks.RICE_CROP.get()))
+        .addCriterion("onion",
+                ItemUsedOnLocationTrigger.TriggerInstance.placedBlock(
+                        ModBlocks.ONION_CROP.get()));
+```
+
+`AdvancementRequirements.Strategy.OR` is important here. Without it, the player would need to plant all three crops instead of just one. Use the block that is actually placed as the criterion target, not merely the seed item used to place it.
+
+### Metal Detector advancement
+
+For an item-use advancement, use `ItemUsedOnLocationTrigger` with both a location predicate and an item predicate:
+
+```java
+.addCriterion("metal_detector",
+        ItemUsedOnLocationTrigger.TriggerInstance.itemUsedOnBlock(
+                LocationPredicate.Builder.location().setCanSeeSky(true),
+                ItemPredicate.Builder.item().of(items, ModItems.METAL_DETECTOR)))
+```
+
+This condition rewards the advancement when the Metal Detector is used on a block at a location with sky visibility. It does not require a successful ore scan, so the advancement documents detector use rather than the detector's success result.
+
+### Localization and generated output
+
+Add title and description keys to `src/main/resources/assets/examplemod/lang/en_us.json`:
+
+```json
+"advancements.examplemod.root.title": "Example Mod Advancements",
+"advancements.examplemod.root.description": "Example Mod Advancements Pretty Cool!",
+"advancements.examplemod.plant_custom.title": "Plant a custom plant",
+"advancements.examplemod.plant_custom.description": "Planting these custom plants is pretty neat!",
+"advancements.examplemod.metal_detector.title": "Detected Valuables",
+"advancements.examplemod.metal_detector.description": "Try finding valuables with the Metal Detector"
+```
+
+Run datagen after changing the provider. Verify the generated files under `src/generated/resources/data/`. The root and Metal Detector files use the `examplemod` namespace, while the current crop advancement is generated under `data/minecraft/advancement/examplemod/` because its save call uses a plain path string. Prefer an explicit namespaced `Identifier` for new advancements so generated files stay under the mod namespace. Confirm the parent IDs, criteria, trigger names, and translated keys match the Java definitions.
+
+### Validation checklist
+
+1. Register `ModAdvancements` from `ExampleModDataGen`.
+2. Give every advancement a unique namespaced save ID.
+3. Confirm parent advancements are saved before their children.
+4. Use OR requirements when any one of several criteria should complete the advancement.
+5. Add every title and description key to the language file.
+6. Run datagen and inspect the generated advancement JSON.
+7. Test the actual triggers in-game: obtain Azurite, plant each supported crop, and use the Metal Detector under open sky.
 
 ## Data-Driven Tags
 

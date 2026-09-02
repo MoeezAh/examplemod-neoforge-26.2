@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
+import com.example.examplemod.datagen.ModAdvancements;
 import com.example.examplemod.datagen.ModBlockLootTableProvider;
 import com.example.examplemod.datagen.ModBlockTagsProvider;
 import com.example.examplemod.datagen.ModDataMapProvider;
@@ -47,5 +48,6 @@ public class ExampleModDataGen {
         generator.addProvider(true, new ModPaintingTagsProvider(packOutput, lookupProvider));
 
         generator.addProvider(true, new ModSoundsProvider(packOutput));
+        generator.addProvider(true, new ModAdvancements(packOutput, lookupProvider));
     }
 }
