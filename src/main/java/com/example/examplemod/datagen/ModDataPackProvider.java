@@ -4,6 +4,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.datagen.Villager.ModTradeSets;
 import com.example.examplemod.datagen.Villager.ModVillagerTrades;
 
 import net.minecraft.core.HolderLookup.Provider;
@@ -17,7 +18,9 @@ public class ModDataPackProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.PAINTING_VARIANT, ModPaintings::bootstrap)
             .add(Registries.JUKEBOX_SONG, ModJukeboxSongs::bootstrap)
             .add(Registries.DAMAGE_TYPE, ModDamageTypes::bootstrap)
-            .add(Registries.VILLAGER_TRADE, ModVillagerTrades::bootstrap);
+
+            .add(Registries.VILLAGER_TRADE, ModVillagerTrades::bootstrap)
+            .add(Registries.TRADE_SET, ModTradeSets::bootstrap);
 
     public ModDataPackProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries, BUILDER, Set.of(ExampleMod.MOD_ID));

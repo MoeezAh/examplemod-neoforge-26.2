@@ -5,9 +5,9 @@ A Minecraft content mod built with [NeoForge](https://neoforged.net/). It introd
 ## Compatibility
 
 - Minecraft `26.2`
-- NeoForge `26.2.0.75` or newer
+- NeoForge `26.2.0.79` or newer
 - Mod ID: `examplemod`
-- Version: `1.44.0-26.2`
+- Version: `1.45.0-26.2`
 
 ## Content
 
@@ -38,8 +38,10 @@ The mod adds custom trades through the villager trade datapack registry:
 - **Farmer, level 1** — 4 Emeralds for 2 Onion Seeds, or 2 Diamonds for 10 Onions. Each trade has 12 or 9 uses respectively and awards 6 villager experience.
 - **Farmer, level 2** — 12 Goji Berries for 1 Emerald. The trade has 12 uses and awards 6 villager experience.
 - **Librarian, level 1** — 32 Azurite for an Enchanted Book. The generated book is randomly enchanted from Infinity or Multishot, and the trade has 12 uses with 6 villager experience.
+- **Kaupenger, level 1** — 12 Emeralds for a Metal Detector, or 12 Emeralds for Raw Azurite. Each trade has 12 uses and awards 6 villager experience.
+- **Kaupenger, level 2** — 10 Emeralds for a Metal Detector, or 10 Azurite for a Magic Block. Each trade has 12 uses and awards 6 villager experience.
 
-Trade definitions are generated under `src/generated/resources/data/examplemod/villager_trade/` and assigned to the corresponding vanilla villager level tags.
+Trade definitions are generated under `src/generated/resources/data/examplemod/villager_trade/` and assigned to the corresponding villager level tags. The Kaupenger profession uses the Magic Block as its point of interest, and its trade sets are generated under `src/generated/resources/data/examplemod/trade_set/`.
 
 ### End Fire Starter
 

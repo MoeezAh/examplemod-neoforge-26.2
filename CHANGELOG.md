@@ -2,6 +2,15 @@
 
 Changes are listed in chronological order, from oldest to newest.
 
+## 2026-09-07
+
+- Bumped the mod version from `1.44.0-26.2` to `1.45.0-26.2` for the Kaupenger profession update.
+- Added the **Kaupenger** villager profession, using the Magic Block as its point of interest and acquirable job site.
+- Added Kaupenger level 1 trades for a Metal Detector and Raw Azurite in exchange for Emeralds.
+- Added Kaupenger level 2 trades for a Metal Detector in exchange for Emeralds and a Magic Block in exchange for Azurite.
+- Added generated Kaupenger trade sets, villager trade tags, point-of-interest tags, and the localized profession name.
+- Updated NeoForge metadata generation to use the configured version range and moved the development dependency to `26.2.0.79`.
+
 ## 2026-09-03
 
 - Bumped the mod version from `1.43.0-26.2` to `1.44.0-26.2` for the villager trade update.

@@ -359,6 +359,34 @@ context.register(LIBRARIAN_1_AZURITE_ENCHANTED, new VillagerTrade(
                         enchantments.getOrThrow(Enchantments.MULTISHOT)))));
 ```
 
+The mod also defines a custom `Kaupenger` profession. Register a point of interest backed by the states of the profession's workstation, then register the profession with that point of interest as both its requested and valid job site. Supply custom level-to-trade-set mappings in the profession registration:
+
+```java
+public static final Holder<PoiType> KAUPER_POI = POI_TYPES.register("kauper_poi",
+        () -> new PoiType(ImmutableSet.copyOf(ModBlocks.MAGIC_BLOCK.get()
+                .getStateDefinition().getPossibleStates()), 1, 1));
+
+public static final Holder<VillagerProfession> KAUPENGER = VILLAGER_PROFESSIONS.register("kaupenger",
+        () -> new VillagerProfession(Component.literal("Kaupenger"),
+                holder -> holder.value() == KAUPER_POI.value(),
+                holder -> holder.value() == KAUPER_POI.value(),
+                ImmutableSet.of(), ImmutableSet.of(), SoundEvents.AMETHYST_BLOCK_CHIME,
+                Int2ObjectMap.ofEntries(
+                        Int2ObjectMap.entry(1, ModTradeSets.KAUPENGER_LEVEL_1),
+                        Int2ObjectMap.entry(2, ModTradeSets.KAUPENGER_LEVEL_2))));
+```
+
+Define each custom trade set in the `TRADE_SET` datapack registry by looking up a namespaced `VillagerTrade` tag. The default number provider controls how many trades are selected from the set:
+
+```java
+context.register(resourceKey,
+        new TradeSet(context.lookup(Registries.VILLAGER_TRADE).getOrThrow(tradeTag),
+                ConstantValue.exactly(2.0F), false,
+                Optional.of(resourceKey.identifier().withPrefix("trade_set/"))));
+```
+
+Add the profession's trade tags to `ModTags`, assign the trade keys in `ModVillagerTradeTags`, and add the custom point of interest to `PoiTypeTags.ACQUIRABLE_JOB_SITE` through a `PoiTypeTagsProvider`. Register both providers from `ExampleModDataGen` and add `ModTradeSets::bootstrap` to `ModDataPackProvider`.
+
 Use registry lookups from the `BootstrapContext` for enchantments and other dynamic registry content. Keep the trade key path aligned with its profession and level, such as `farmer/1/azurite_onion_seeds` or `librarian/1/azurite_enchanted`.
 
 ### Register the datapack registry
@@ -401,8 +429,11 @@ Run datagen and inspect both output locations:
 
 - `src/generated/resources/data/examplemod/villager_trade/` for the four trade definitions.
 - `src/generated/resources/data/minecraft/tags/villager_trade/` for the Farmer and Librarian profession-level tags.
+- `src/generated/resources/data/examplemod/trade_set/` for the Kaupenger trade sets.
+- `src/generated/resources/data/examplemod/tags/villager_trade/` for the Kaupenger trade tags.
+- `src/generated/resources/data/minecraft/tags/point_of_interest_type/` for the acquirable Kaupenger job site tag.
 
-Validate with actual villagers: level a Farmer to levels 1 and 2, confirm each crop trade appears with the correct costs and quantities, and level a Librarian to level 1 to confirm the Azurite enchanted-book trade produces only Infinity or Multishot. Also confirm trade exhaustion, villager XP, and reputation discounts behave as configured.
+Validate with actual villagers: level a Farmer to levels 1 and 2, confirm each crop trade appears with the correct costs and quantities, level a Librarian to level 1 to confirm the Azurite enchanted-book trade produces only Infinity or Multishot, and place a Magic Block near an unemployed villager to confirm it can become a Kaupenger. Confirm the Kaupenger level 1 and 2 trades, trade exhaustion, villager XP, and reputation discounts behave as configured.
 
 ## Data-Driven Tags
 

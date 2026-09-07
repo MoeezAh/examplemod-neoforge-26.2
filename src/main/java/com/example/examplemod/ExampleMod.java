@@ -10,6 +10,7 @@ import com.example.examplemod.item.ModItems;
 import com.example.examplemod.potion.ModPotions;
 import com.example.examplemod.sound.ModSounds;
 import com.example.examplemod.stat.ModStats;
+import com.example.examplemod.villager.ModVillager;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -117,6 +118,8 @@ public class ExampleMod {
         ModEffects.register(modEventBus);
 
         ModPotions.register(modEventBus);
+
+        ModVillager.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod)

@@ -2,6 +2,8 @@ package com.example.examplemod.datagen.Villager;
 
 import java.util.concurrent.CompletableFuture;
 
+import com.example.examplemod.tags.ModTags;
+
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.VillagerTradesTagsProvider;
@@ -25,6 +27,14 @@ public class ModVillagerTradeTags extends VillagerTradesTagsProvider {
 
         getOrCreateRawBuilder(VillagerTradeTags.LIBRARIAN_LEVEL_1)
                 .add(TagEntry.element(ModVillagerTrades.LIBRARIAN_1_AZURITE_ENCHANTED.identifier()));
+
+        getOrCreateRawBuilder(ModTags.Trades.KAUPENGER_LEVEL_1)
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_1_EMERALD_METAL_DETECTOR.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_1_EMERALD_RAW_AZURITE.identifier()));
+
+        getOrCreateRawBuilder(ModTags.Trades.KAUPENGER_LEVEL_2)
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_2_EMERALD_METAL_DETECTOR.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_2_AZURITE_MAGIC_BLOCK.identifier()));
     }
 
 }

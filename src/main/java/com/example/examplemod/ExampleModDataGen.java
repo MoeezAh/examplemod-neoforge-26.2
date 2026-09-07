@@ -15,6 +15,7 @@ import com.example.examplemod.datagen.ModModelProvider;
 import com.example.examplemod.datagen.ModPaintingTagsProvider;
 import com.example.examplemod.datagen.ModRecipeProvider;
 import com.example.examplemod.datagen.ModSoundsProvider;
+import com.example.examplemod.datagen.Villager.ModPOITags;
 import com.example.examplemod.datagen.Villager.ModVillagerTradeTags;
 
 import net.minecraft.core.HolderLookup.Provider;
@@ -52,5 +53,6 @@ public class ExampleModDataGen {
         generator.addProvider(true, new ModAdvancements(packOutput, lookupProvider));
 
         generator.addProvider(true, new ModVillagerTradeTags(packOutput, lookupProvider));
+        generator.addProvider(true, new ModPOITags(packOutput, lookupProvider));
     }
 }

@@ -95,6 +95,8 @@
   "tooltip.examplemod.azurite_slab.tooltip": "§7The flat slab of Azurite§r",
   "tooltip.examplemod.azurite_pressure_plate.tooltip": "§7The Azurite's pressure plate§r",
   "tooltip.examplemod.azurite_button.tooltip": "§7The Azurite's button.§r",
+  
+  "entity.minecraft.villager.examplemod.kaupenger": "Kaupenger",
 
   "examplemod.configuration.title": "Example Mod Configs",
   "examplemod.configuration.section.examplemod.common.toml": "Example Mod Configs",
