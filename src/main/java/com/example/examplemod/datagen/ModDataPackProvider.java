@@ -4,6 +4,7 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 import com.example.examplemod.ExampleMod;
+import com.example.examplemod.datagen.Villager.ModVillagerTrades;
 
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.core.registries.Registries;
@@ -15,7 +16,8 @@ public class ModDataPackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.PAINTING_VARIANT, ModPaintings::bootstrap)
             .add(Registries.JUKEBOX_SONG, ModJukeboxSongs::bootstrap)
-            .add(Registries.DAMAGE_TYPE, ModDamageTypes::bootstrap);
+            .add(Registries.DAMAGE_TYPE, ModDamageTypes::bootstrap)
+            .add(Registries.VILLAGER_TRADE, ModVillagerTrades::bootstrap);
 
     public ModDataPackProvider(PackOutput output, CompletableFuture<Provider> registries) {
         super(output, registries, BUILDER, Set.of(ExampleMod.MOD_ID));

@@ -4,6 +4,14 @@ Changes are listed in chronological order, from oldest to newest.
 
 ## 2026-09-03
 
+- Bumped the mod version from `1.43.0-26.2` to `1.44.0-26.2` for the villager trade update.
+- Added custom Farmer level 1 trades for Onion Seeds and Onions.
+- Added a custom Farmer level 2 trade exchanging Goji Berries for Emeralds.
+- Added a custom Librarian level 1 trade exchanging Azurite for an enchanted book with Infinity or Multishot.
+- Registered the villager trade datapack registry and generated the matching vanilla villager trade tags.
+
+## 2026-09-03
+
 - Bumped the mod version from `1.42.0-26.2` to `1.43.0-26.2` for the advancement update.
 - Added a data-generated advancement tree for the mod.
 - Added a root advancement that unlocks when the player obtains Azurite.

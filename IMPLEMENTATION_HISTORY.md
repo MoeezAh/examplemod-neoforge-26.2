@@ -25,6 +25,7 @@ This document is a reusable cookbook for the features implemented in this NeoFor
 - [Composting](#composting)
 - [Custom sounds](#custom-sounds)
 - [Advancements](#advancements)
+- [Villager trades](#villager-trades)
 - [Music disc](#music-disc)
 - [Paintings](#paintings)
 - [Custom statistic](#custom-statistic)
@@ -316,6 +317,92 @@ Run datagen after changing the provider. Verify the generated files under `src/g
 5. Add every title and description key to the language file.
 6. Run datagen and inspect the generated advancement JSON.
 7. Test the actual triggers in-game: obtain Azurite, plant each supported crop, and use the Metal Detector under open sky.
+
+## Villager Trades
+
+This addition follows [NeoForge Modding Tutorial - Minecraft 26.2: Custom Villager Trades | #42](https://www.youtube.com/watch?v=nI8LSkYmlq4) by Modding by Kaupenjoe.
+
+Villager trades are datapack registry entries. A complete implementation has three parts: define each `VillagerTrade`, register the `VILLAGER_TRADE` registry with the datapack provider, and add each trade to the vanilla villager level tag that controls when it appears in-game.
+
+### Define the trades
+
+Create `ModVillagerTrades` under the datagen package and give every trade a namespaced `ResourceKey<VillagerTrade>`. Use `TradeCost` for the requested item, `ItemStackTemplate` for the result, and the trade constructor values for maximum uses, villager XP, reputation discount, and optional result modifiers.
+
+The current implementation adds these trades:
+
+```java
+context.register(FARMER_1_EMERALD_ONION_SEEDS, new VillagerTrade(
+        new TradeCost(Items.EMERALD, 4),
+        new ItemStackTemplate(ModItems.ONION_SEED, 2),
+        12, 6, 0.05F, Optional.empty(), List.of()));
+
+context.register(FARMER_1_DIAMOND_ONION, new VillagerTrade(
+        new TradeCost(Items.DIAMOND, 2),
+        new ItemStackTemplate(ModItems.ONION, 10),
+        9, 6, 0.05F, Optional.empty(), List.of()));
+
+context.register(FARMER_2_GOJI_BERRIES_EMERALDS, new VillagerTrade(
+        new TradeCost(ModItems.GOJI_BERRY, 12),
+        new ItemStackTemplate(Items.EMERALD),
+        12, 6, 0.05F, Optional.empty(), List.of()));
+```
+
+The librarian trade uses `VillagerTrades.enchantedBook(...)` to add an enchanted-book result and restrict the random enchantment pool:
+
+```java
+context.register(LIBRARIAN_1_AZURITE_ENCHANTED, new VillagerTrade(
+        new TradeCost(ModItems.AZURITE, 32),
+        new ItemStackTemplate(Items.ENCHANTED_BOOK),
+        12, 6, 0.05F, Optional.empty(),
+        VillagerTrades.enchantedBook(items,
+                HolderSet.direct(enchantments.getOrThrow(Enchantments.INFINITY),
+                        enchantments.getOrThrow(Enchantments.MULTISHOT)))));
+```
+
+Use registry lookups from the `BootstrapContext` for enchantments and other dynamic registry content. Keep the trade key path aligned with its profession and level, such as `farmer/1/azurite_onion_seeds` or `librarian/1/azurite_enchanted`.
+
+### Register the datapack registry
+
+Add the villager trade bootstrap to `ModDataPackProvider` so the definitions become live datapack registry entries:
+
+```java
+.add(Registries.VILLAGER_TRADE, ModVillagerTrades::bootstrap)
+```
+
+Without this registry-builder entry, the Java trade definitions are never included in generated world data.
+
+### Add profession-level tags
+
+Create `ModVillagerTradeTags` by extending `VillagerTradesTagsProvider`. Add each trade key to the vanilla tag matching the villager profession and level:
+
+```java
+getOrCreateRawBuilder(VillagerTradeTags.FARMER_LEVEL_1)
+        .add(TagEntry.element(ModVillagerTrades.FARMER_1_EMERALD_ONION_SEEDS.identifier()))
+        .add(TagEntry.element(ModVillagerTrades.FARMER_1_DIAMOND_ONION.identifier()));
+
+getOrCreateRawBuilder(VillagerTradeTags.FARMER_LEVEL_2)
+        .add(TagEntry.element(ModVillagerTrades.FARMER_2_GOJI_BERRIES_EMERALDS.identifier()));
+
+getOrCreateRawBuilder(VillagerTradeTags.LIBRARIAN_LEVEL_1)
+        .add(TagEntry.element(ModVillagerTrades.LIBRARIAN_1_AZURITE_ENCHANTED.identifier()));
+```
+
+The tag determines when the trade is offered. A valid trade definition that is not included in a profession-level tag will not appear in the corresponding villager's trade list.
+
+### Register datagen and validate in-game
+
+Register `ModVillagerTradeTags` from `ExampleModDataGen` alongside the other data providers:
+
+```java
+generator.addProvider(true, new ModVillagerTradeTags(packOutput, lookupProvider));
+```
+
+Run datagen and inspect both output locations:
+
+- `src/generated/resources/data/examplemod/villager_trade/` for the four trade definitions.
+- `src/generated/resources/data/minecraft/tags/villager_trade/` for the Farmer and Librarian profession-level tags.
+
+Validate with actual villagers: level a Farmer to levels 1 and 2, confirm each crop trade appears with the correct costs and quantities, and level a Librarian to level 1 to confirm the Azurite enchanted-book trade produces only Infinity or Multishot. Also confirm trade exhaustion, villager XP, and reputation discounts behave as configured.
 
 ## Data-Driven Tags
 
